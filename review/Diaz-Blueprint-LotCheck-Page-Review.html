@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lot Check — a free, honest ADU answer for your lot | Diaz Blueprint &amp; Drafting Services</title>
+  <meta name="description" content="Free ADU feasibility check for Los Angeles & Orange County. Enter your address and learn in about two minutes what your lot likely allows — size, type, and ballpark cost. If it doesn't work, we'll tell you that too. 35 years of experience. Hablamos Español. 323.566.8096" />
+  <meta property="og:title" content="Lot Check — the casita projects that fail usually fail at the lot" />
+  <meta property="og:description" content="Free ADU feasibility check for LA & Orange County. Enter your address, get an honest answer in about two minutes. Diaz Blueprint — 35 years, the City of South Gate's top ADU referral." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Design system first, then the page layer (base reset + layout). -->
+  <style>
+/* ==========================================================================
+   Diaz Blueprint Design System  —  @diaz-blueprint/ui
+   SYNCED ARTIFACT. Generated from the design system (src/styles.css).
+   To update: rebuild the DS (`npm run build` in ../dbp-design-system) and
+   copy its dist/styles.css over this file. Do not hand-edit — page-specific
+   styles live in styles.css, which loads after this file.
+   Brand: Process Blue #0072CE · Dark #1A1A2E · Warm #F9F6F1 · White
+   Type: Poppins (headlines, loaded via the page <link>) · Helvetica (body)
+   ========================================================================== */
+
+:root {
+  --dbp-blue: #0072CE;
+  --dbp-blue-dark: #005DA6;
+  --dbp-dark: #1A1A2E;
+  --dbp-warm: #F9F6F1;
+  --dbp-white: #FFFFFF;
+  --dbp-gray-500: #6B7280;
+  --dbp-gray-700: #374151;
+  --dbp-gray-200: #E5E7EB;
+  --dbp-green: #16A34A;
+  --dbp-amber: #B45309;
+  --dbp-radius: 12px;
+  --dbp-radius-sm: 10px;
+  --dbp-font-head: 'Poppins', 'Helvetica Neue', Helvetica, sans-serif;
+  --dbp-font-body: Helvetica, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* ---------- Button ---------- */
+.dbp-btn {
+  font-family: var(--dbp-font-head);
+  font-weight: 700;
+  font-size: 16px;
+  border: none;
+  border-radius: var(--dbp-radius);
+  padding: 15px 26px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  line-height: 1;
+}
+.dbp-btn--primary { background: var(--dbp-blue); color: var(--dbp-white); }
+.dbp-btn--primary:hover { background: var(--dbp-blue-dark); }
+.dbp-btn--dark { background: var(--dbp-dark); color: var(--dbp-white); font-weight: 600; }
+.dbp-btn--dark:hover { background: #2a2a44; }
+.dbp-btn--outline { background: transparent; color: var(--dbp-blue); border: 2px solid var(--dbp-blue); }
+.dbp-btn--outline:hover { background: rgba(0, 114, 206, 0.07); }
+.dbp-btn--sm { font-size: 14.5px; padding: 11px 20px; border-radius: var(--dbp-radius-sm); }
+.dbp-btn:disabled { background: var(--dbp-gray-500); cursor: wait; }
+
+/* ---------- PhoneButton ---------- */
+.dbp-phone {
+  font-family: var(--dbp-font-head);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--dbp-white);
+  background: var(--dbp-blue);
+  padding: 8px 16px;
+  border-radius: var(--dbp-radius-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+.dbp-phone:hover { background: var(--dbp-blue-dark); }
+
+/* ---------- Input ---------- */
+.dbp-input {
+  font-family: var(--dbp-font-body);
+  font-size: 16px;
+  padding: 15px 16px;
+  border: 2px solid var(--dbp-gray-200);
+  border-radius: var(--dbp-radius);
+  color: var(--dbp-dark);
+  background: var(--dbp-white);
+  width: 100%;
+}
+.dbp-input:focus {
+  outline: none;
+  border-color: var(--dbp-blue);
+  box-shadow: 0 0 0 3px rgba(0, 114, 206, 0.15);
+}
+
+/* ---------- Header ---------- */
+.dbp-header {
+  background: var(--dbp-dark);
+  color: var(--dbp-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 12px 20px;
+}
+.dbp-header__brand { display: flex; align-items: center; gap: 10px; }
+.dbp-header__brand-name { font-family: var(--dbp-font-head); font-weight: 700; font-size: 15px; }
+.dbp-header__est { font-size: 12px; color: rgba(255, 255, 255, 0.55); }
+.dbp-header__contact { display: flex; align-items: center; gap: 14px; }
+.dbp-header__espanol { font-size: 12px; color: rgba(255, 255, 255, 0.65); }
+
+/* ---------- Logo ---------- */
+.dbp-logo { display: block; height: auto; max-width: 100%; }
+.dbp-logo--header { height: 28px; width: auto; }
+.dbp-logo--footer { height: 32px; width: auto; margin: 0 auto 14px; }
+
+/* ---------- Footer ---------- */
+.dbp-footer {
+  background: var(--dbp-dark);
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  padding: 32px 20px 40px;
+  font-size: 13.5px;
+}
+.dbp-footer a { color: rgba(255, 255, 255, 0.85); text-decoration: none; }
+.dbp-footer__taglines { margin-top: 8px; color: rgba(255, 255, 255, 0.45); font-style: italic; }
+.dbp-footer__legal { margin: 18px auto 0; max-width: 680px; font-size: 11.5px; line-height: 1.6; color: rgba(255, 255, 255, 0.38); }
+
+/* ---------- Section ---------- */
+.dbp-section { padding: 56px 20px; background: var(--dbp-white); color: var(--dbp-dark); }
+.dbp-section--warm { background: var(--dbp-warm); }
+.dbp-section--dark { background: var(--dbp-dark); color: rgba(255, 255, 255, 0.88); }
+.dbp-section--cta { text-align: center; }
+.dbp-section__inner { max-width: 1040px; margin: 0 auto; }
+.dbp-section__inner--narrow { max-width: 720px; }
+.dbp-section h2 { font-family: var(--dbp-font-head); font-size: clamp(24px, 3.5vw, 32px); font-weight: 800; margin-bottom: 14px; line-height: 1.25; }
+.dbp-section--dark h2 { color: var(--dbp-white); }
+.dbp-section__lede { font-size: 16.5px; color: var(--dbp-gray-700); max-width: 760px; margin-bottom: 26px; }
+.dbp-section--dark .dbp-section__lede { color: rgba(255, 255, 255, 0.75); }
+.dbp-section--cta .dbp-section__lede { margin-left: auto; margin-right: auto; }
+
+/* ---------- Hero ---------- */
+.dbp-hero {
+  padding: 56px 20px 40px;
+  background-color: var(--dbp-white);
+  background-image:
+    linear-gradient(rgba(0, 114, 206, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 114, 206, 0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.dbp-hero__inner { max-width: 1040px; margin: 0 auto; }
+.dbp-hero h1 { font-family: var(--dbp-font-head); font-size: clamp(34px, 5vw, 52px); font-weight: 800; color: var(--dbp-dark); margin-bottom: 16px; line-height: 1.15; }
+.dbp-hero__sub { font-size: 19px; color: var(--dbp-gray-700); margin-bottom: 10px; }
+.dbp-hero__espanol { font-style: italic; color: var(--dbp-blue); font-size: 15px; margin-bottom: 26px; }
+
+/* ---------- Card ---------- */
+.dbp-card { background: var(--dbp-white); border-radius: var(--dbp-radius); padding: 22px; border: 1px solid var(--dbp-gray-200); }
+.dbp-card--warm { background: var(--dbp-warm); border: none; }
+
+/* ---------- FeatureCard (reason) ---------- */
+.dbp-feature { background: var(--dbp-white); border-radius: var(--dbp-radius); padding: 22px; border: 1px solid var(--dbp-gray-200); }
+.dbp-feature__title { font-family: var(--dbp-font-head); font-size: 17px; font-weight: 700; color: var(--dbp-blue); margin-bottom: 8px; }
+.dbp-feature__body { font-size: 14.5px; color: var(--dbp-gray-700); }
+
+/* ---------- Verdict / ResultCard ---------- */
+.dbp-result { border: 2px solid var(--dbp-gray-200); border-radius: var(--dbp-radius); overflow: hidden; background: var(--dbp-white); }
+.dbp-verdict { padding: 28px; color: var(--dbp-white); }
+.dbp-verdict--yes { background: var(--dbp-green); }
+.dbp-verdict--conditions { background: var(--dbp-amber); }
+.dbp-verdict--look { background: var(--dbp-blue-dark); }
+.dbp-verdict__label { font-family: var(--dbp-font-head); font-size: 11px; font-weight: 700; letter-spacing: 3px; opacity: 0.85; margin-bottom: 6px; text-transform: uppercase; }
+.dbp-verdict__title { font-family: var(--dbp-font-head); font-size: clamp(24px, 4vw, 34px); font-weight: 800; }
+.dbp-verdict__sub { margin-top: 8px; font-size: 14px; opacity: 0.9; }
+.dbp-result__body { padding: 26px 28px; }
+
+/* ---------- Chip ---------- */
+.dbp-chip { border: 1.5px solid var(--dbp-gray-200); border-radius: var(--dbp-radius-sm); padding: 12px 14px; font-size: 13.5px; display: block; }
+.dbp-chip--eligible { border-color: rgba(22, 163, 74, 0.45); background: rgba(22, 163, 74, 0.06); }
+.dbp-chip--maybe { border-color: rgba(180, 83, 9, 0.4); background: rgba(180, 83, 9, 0.05); }
+.dbp-chip__name { font-family: var(--dbp-font-head); font-weight: 600; display: block; color: var(--dbp-dark); }
+.dbp-chip__note { color: var(--dbp-gray-500); font-size: 12.5px; }
+
+/* ---------- Stat / Fact ---------- */
+.dbp-stat { display: inline-block; }
+.dbp-stat__num { font-family: var(--dbp-font-head); font-weight: 800; font-size: 22px; color: var(--dbp-dark); display: block; }
+.dbp-stat__label { font-size: 12.5px; color: var(--dbp-gray-500); }
+
+/* ---------- BulletList (blue-dot) ---------- */
+.dbp-bullets { list-style: none; margin: 0; padding: 0; }
+.dbp-bullets li { padding: 7px 0 7px 22px; position: relative; font-size: 15px; color: var(--dbp-gray-700); }
+.dbp-bullets li::before { content: ""; position: absolute; left: 0; top: 14px; width: 8px; height: 8px; border-radius: 50%; background: var(--dbp-blue); }
+.dbp-section--dark .dbp-bullets li { color: rgba(255, 255, 255, 0.78); }
+.dbp-section--dark .dbp-bullets li strong { color: var(--dbp-white); }
+
+/* ---------- ProofStrip ---------- */
+.dbp-proof { padding-top: 16px; border-top: 1px solid var(--dbp-gray-200); font-size: 13px; color: var(--dbp-gray-500); font-style: italic; }
+
+/* ---------- Steps (numbered) ---------- */
+.dbp-steps { list-style: none; counter-reset: dbpstep; margin: 0; padding: 0; max-width: 720px; }
+.dbp-steps li { counter-increment: dbpstep; position: relative; padding: 12px 0 12px 56px; font-size: 16px; color: var(--dbp-gray-700); min-height: 48px; }
+.dbp-steps li::before {
+  content: counter(dbpstep);
+  position: absolute; left: 0; top: 8px;
+  width: 38px; height: 38px; border-radius: var(--dbp-radius-sm);
+  background: var(--dbp-blue); color: var(--dbp-white);
+  font-family: var(--dbp-font-head); font-weight: 700; font-size: 17px;
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* ---------- OutcomeCard (top-border by verdict) ---------- */
+.dbp-outcome { background: var(--dbp-white); border-radius: var(--dbp-radius); padding: 22px; border-top: 4px solid var(--dbp-gray-200); }
+.dbp-outcome--yes { border-top-color: var(--dbp-green); }
+.dbp-outcome--conditions { border-top-color: var(--dbp-amber); }
+.dbp-outcome--look { border-top-color: var(--dbp-blue); }
+.dbp-outcome__title { font-family: var(--dbp-font-head); font-size: 17px; margin-bottom: 8px; }
+.dbp-outcome__body { font-size: 14.5px; color: var(--dbp-gray-700); }
+
+/* ---------- Tagline ---------- */
+.dbp-tagline { font-family: var(--dbp-font-head); font-style: italic; color: var(--dbp-blue); font-size: 15px; }
+
+/* ---------- Grid helper ---------- */
+.dbp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+
+</style>
+  <style>
+/* ==========================================================================
+   Diaz Blueprint — Lot Check  ·  PAGE LAYER
+   Loads AFTER ds.css. Everything visual comes from the design system
+   (ds.css, the dbp- classes); this file holds only what the DS doesn't own:
+   the base reset, page-level layout/scaffolding (hero grid, form rows, the
+   blueprint sketch, the results/loading state, result-card sub-structure),
+   and responsive behavior. Page-only classes are namespaced `lc-`.
+   Tokens (--dbp-*) are defined in ds.css.
+   ========================================================================== */
+
+/* ---------- Base reset ---------- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--dbp-font-body);
+  color: var(--dbp-dark);
+  background: var(--dbp-white);
+  line-height: 1.7;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--dbp-blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px;
+  clip: rect(0 0 0 0); overflow: hidden; white-space: nowrap;
+}
+
+/* Body copy inside design-system text blocks keeps comfortable paragraph spacing. */
+.dbp-section p + p,
+.dbp-result__body p + p { margin-top: 12px; }
+.dbp-section--dark p { color: rgba(255, 255, 255, 0.82); }
+
+/* ---------- Header: make the DS header sticky on this page ---------- */
+.dbp-header { position: sticky; top: 0; z-index: 50; }
+
+/* ---------- Hero layout ---------- */
+.lc-hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 44px;
+  align-items: center;
+}
+.lc-hero-call { font-size: 14.5px; color: var(--dbp-gray-700); margin-top: 16px; }
+.lc-microcopy { font-size: 12.5px; color: var(--dbp-gray-500); margin-top: 10px; font-style: italic; }
+
+/* Address form: input grows, button hugs its label. Uses dbp-input + dbp-btn. */
+.lc-form { display: flex; gap: 10px; flex-wrap: wrap; }
+.lc-form .dbp-input { flex: 1 1 280px; width: auto; }
+.lc-form--center { max-width: 560px; margin: 0 auto 8px; }
+
+/* Blueprint sketch (page-specific line art) */
+.lc-hero-plan svg { width: 100%; height: auto; }
+.plan-label { font-family: var(--dbp-font-head); font-size: 10px; letter-spacing: 2px; fill: var(--dbp-gray-500); }
+.plan-label-blue { fill: var(--dbp-blue); font-weight: 700; }
+.plan-dim { font-family: var(--dbp-font-head); font-size: 9px; fill: var(--dbp-blue); }
+
+/* "Every Lot Check includes" — a warm DS card with a small title */
+.lc-includes { margin-top: 44px; }
+.lc-includes__title { font-family: var(--dbp-font-head); font-size: 16px; font-weight: 700; color: var(--dbp-dark); margin-bottom: 12px; }
+
+/* "What your result means" footnote, trust español line */
+.lc-fine-note { margin-top: 24px; font-size: 13.5px; color: var(--dbp-gray-500); font-style: italic; }
+.lc-trust-espanol { font-style: italic; color: rgba(255, 255, 255, 0.7); margin-top: 14px; font-size: 15px; }
+.lc-trust-espanol a { color: var(--dbp-white); }
+
+/* ---------- Results ---------- */
+.lc-results { padding: 12px 20px 48px; }
+.lc-results__inner { max-width: 1040px; margin: 0 auto; }
+
+.lc-loading { text-align: center; padding: 40px 0; }
+.lc-loading__rule {
+  width: 120px; height: 3px; margin: 0 auto 18px;
+  background: linear-gradient(90deg, var(--dbp-blue), transparent);
+  animation: lc-sweep 1.2s ease-in-out infinite;
+  border-radius: 2px;
+}
+@keyframes lc-sweep {
+  0% { transform: translateX(-30px); opacity: 0.4; }
+  50% { transform: translateX(30px); opacity: 1; }
+  100% { transform: translateX(-30px); opacity: 0.4; }
+}
+.lc-loading__text { font-family: var(--dbp-font-head); font-weight: 700; font-size: 20px; }
+.lc-loading__sub { font-size: 14px; color: var(--dbp-gray-500); margin-top: 6px; }
+
+/* Result-card sub-structure (composition around the DS Verdict/Chip/Stat atoms) */
+.lc-result-section + .lc-result-section { margin-top: 22px; padding-top: 20px; border-top: 1px solid var(--dbp-gray-200); }
+.lc-result-section h4 {
+  font-family: var(--dbp-font-head);
+  font-size: 11px; font-weight: 700; letter-spacing: 2.5px;
+  color: var(--dbp-blue); margin-bottom: 10px; text-transform: uppercase;
+}
+.lc-facts { display: flex; flex-wrap: wrap; gap: 22px; }
+
+.lc-result-next { margin-top: 24px; background: var(--dbp-warm); border-radius: var(--dbp-radius-sm); padding: 20px 22px; }
+.lc-result-next h4 {
+  font-family: var(--dbp-font-head);
+  font-size: 11px; font-weight: 700; letter-spacing: 2.5px;
+  color: var(--dbp-dark); margin-bottom: 10px; text-transform: uppercase;
+}
+.lc-result-next p { font-size: 14.5px; color: var(--dbp-gray-700); }
+.lc-cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin: 14px 0; }
+
+.lc-lead-form { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+.lc-lead-form .dbp-input { flex: 1 1 170px; width: auto; padding: 11px 13px; font-size: 14.5px; border-width: 1.5px; }
+.lc-lead-thanks { font-size: 14.5px; color: var(--dbp-green); font-weight: 600; margin-top: 12px; }
+.lc-result-disclaimer { margin-top: 18px; font-size: 12px; color: var(--dbp-gray-500); font-style: italic; }
+
+/* ---------- Tap chips (goal / owner / timeline / who-to-call / pro volume) ---------- */
+.lc-chipbtn {
+  font-family: var(--dbp-font-head); font-size: 14px; font-weight: 600;
+  color: var(--dbp-gray-700); background: var(--dbp-white);
+  border: 1.5px solid #7A828F; border-radius: 999px;
+  padding: 10px 16px; min-height: 44px; cursor: pointer;
+  transition: border-color .15s, color .15s, background .15s;
+}
+.lc-chipbtn:hover { border-color: var(--dbp-blue); color: var(--dbp-blue); }
+.lc-chipbtn--on { border-color: var(--dbp-blue); color: var(--dbp-white); background: var(--dbp-blue); }
+.lc-chipbtn--dark { background: transparent; color: rgba(255,255,255,.85); border-color: rgba(255,255,255,.35); }
+.lc-chipbtn--dark:hover { border-color: var(--dbp-white); color: var(--dbp-white); }
+.lc-chipbtn--dark.lc-chipbtn--on { background: var(--dbp-blue); border-color: var(--dbp-blue); color: var(--dbp-white); }
+
+.lc-goalrow { margin-top: 14px; }
+.lc-goalrow__label { font-size: 13.5px; font-weight: 600; color: var(--dbp-gray-700); margin-bottom: 8px; }
+.lc-goalrow__hint { font-weight: 400; color: var(--dbp-gray-500); font-style: italic; }
+.lc-goalrow__chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.lc-goalrow__chips--center { justify-content: center; }
+
+/* Header pro-lane link */
+.lc-pro-link { color: rgba(255,255,255,.75); font-size: 13px; margin-right: 14px; }
+.lc-pro-link:hover { color: #fff; }
+
+/* Hero plan warn label + compact relabel for long goal names */
+.plan-dim--warn { fill: #D97706; }
+.plan-label--small { font-size: 7.5px; letter-spacing: 1px; }
+
+/* "The deal, plainly" two-column card */
+.lc-deal { display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; }
+
+/* Loading-wait owner question */
+.lc-loading-q { margin-top: 22px; }
+.lc-loading-q__label { font-size: 14px; font-weight: 600; color: var(--dbp-gray-700); margin-bottom: 10px; }
+.lc-skip { background: none; border: none; color: var(--dbp-gray-500); font-size: 13px; margin-top: 6px; padding: 10px 12px; cursor: pointer; text-decoration: underline; }
+
+/* Result-card additions */
+.lc-goal-line { margin-top: 10px; font-weight: 600; }
+.lc-verdict-ask { margin-top: 10px; }
+.lc-timeline, .lc-callfor { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 14px; }
+.lc-timeline__label { font-size: 13.5px; font-weight: 600; color: var(--dbp-gray-700); }
+.lc-exploring-note, .lc-callfor-note { font-size: 13px; color: var(--dbp-gray-500); font-style: italic; margin-top: 8px; }
+.lc-lead-fail { font-size: 14px; color: var(--dbp-dark); background: #FDF3E7; border-left: 3px solid #D97706; padding: 10px 14px; border-radius: 4px; margin-top: 12px; }
+
+/* Labeled inputs (visible labels above fields — senior-friendly, no ghost text) */
+.lc-labeled { display: flex; flex-direction: column; gap: 4px; flex: 1 1 170px; }
+.lc-labeled label, .lc-labeled__label { font-size: 13px; font-weight: 600; color: var(--dbp-gray-700); }
+.lc-optional { font-weight: 400; color: var(--dbp-gray-500); }
+.lc-lead-form .lc-labeled .dbp-input { width: 100%; }
+.lc-lead-form { align-items: flex-end; }
+
+/* Expanders (killer cards) */
+.lc-more { margin-top: 10px; }
+.lc-more summary {
+  cursor: pointer; font-family: var(--dbp-font-head); font-size: 12px; font-weight: 700;
+  letter-spacing: 1px; color: var(--dbp-blue); text-transform: uppercase; padding: 8px 0;
+}
+.lc-more p { margin-top: 8px; font-size: 14px; }
+
+/* Four-types tap strip */
+.lc-types-title { font-family: var(--dbp-font-head); font-size: 16px; font-weight: 700; margin: 34px 0 14px; }
+.lc-types { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.lc-type { background: var(--dbp-white); border: 1.5px solid var(--dbp-gray-200); border-radius: var(--dbp-radius-sm); padding: 12px 14px; }
+.lc-type summary {
+  cursor: pointer; display: flex; align-items: center; gap: 10px;
+  font-family: var(--dbp-font-head); font-weight: 600; font-size: 14px; list-style: none;
+}
+.lc-type summary::-webkit-details-marker { display: none; }
+.lc-type summary::after { content: '+'; margin-left: auto; color: var(--dbp-blue); font-weight: 700; font-size: 18px; }
+.lc-type[open] summary::after { content: '–'; }
+.lc-type svg { width: 48px; height: 36px; flex: none; }
+.lc-type p { margin-top: 8px; font-size: 13.5px; color: var(--dbp-gray-700); }
+.lc-type[open] { border-color: var(--dbp-blue); }
+
+/* Honest-no paragraph */
+.lc-no-paragraph { margin-top: 26px; font-size: 16px; }
+.lc-espanol-inline { color: var(--dbp-blue); }
+
+/* Centered stat chips (pricing) */
+.lc-facts--center { justify-content: center; margin-top: 22px; }
+
+/* FAQ accordion */
+.lc-faq details { border-bottom: 1px solid var(--dbp-gray-200); padding: 14px 0; }
+.lc-faq summary {
+  cursor: pointer; font-family: var(--dbp-font-head); font-weight: 600; font-size: 15.5px;
+  list-style: none; position: relative; padding-right: 28px;
+}
+.lc-faq summary::-webkit-details-marker { display: none; }
+.lc-faq summary::after {
+  content: '+'; position: absolute; right: 4px; top: 0;
+  color: var(--dbp-blue); font-weight: 700; font-size: 18px;
+}
+.lc-faq details[open] summary::after { content: '–'; }
+.lc-faq p { margin-top: 10px; font-size: 14.5px; color: var(--dbp-gray-700); }
+
+/* Handbook + centered microcopy */
+.lc-microcopy--center { text-align: center; }
+.lc-lead-thanks--center { text-align: center; }
+
+/* Pro lane */
+.lc-kicker {
+  font-family: var(--dbp-font-head); font-size: 11px; font-weight: 700;
+  letter-spacing: 2.5px; text-transform: uppercase; color: var(--dbp-blue); margin-bottom: 8px;
+}
+.dbp-feature--dark { background: rgba(255,255,255,.05); }
+.dbp-feature--dark .dbp-feature__title { color: var(--dbp-white); }
+.dbp-feature--dark .dbp-feature__body { color: rgba(255,255,255,.8); }
+.lc-pro-form-wrap { margin-top: 34px; background: rgba(255,255,255,.05); border-radius: var(--dbp-radius-sm); padding: 24px; }
+.lc-pro-form-title { font-family: var(--dbp-font-head); font-size: 17px; font-weight: 700; color: var(--dbp-white); margin-bottom: 6px; }
+.lc-pro-lede { font-size: 14.5px; color: rgba(255,255,255,.8); margin-bottom: 16px; }
+.lc-pro-form { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 16px; align-items: end; }
+.lc-pro-form .lc-labeled label, .lc-pro-form .lc-labeled__label { color: rgba(255,255,255,.85); }
+.lc-pro-form .dbp-btn { grid-column: 1 / -1; justify-self: start; }
+.lc-microcopy--dark { color: rgba(255,255,255,.6); }
+.lc-microcopy--dark a { color: rgba(255,255,255,.85); }
+
+/* Four-card grid rows on wide screens */
+.lc-grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+/* ---------- QA fixes: occlusion, contrast, motion, labeled hero form ---------- */
+/* Header polish (2026-07-02): larger logo, more breathing room from the page edge */
+.dbp-header { padding: 12px clamp(20px, 4vw, 44px); }
+.dbp-logo--header { height: 40px; }
+.dbp-logo-link { display: inline-flex; align-items: center; line-height: 0; }
+
+/* Sticky header must not cover scrolled-to targets (header is taller now) */
+#results, #pro-lane { scroll-margin-top: 76px; }
+
+/* Verdict banner contrast (page-layer override of DS tones for small text) */
+.dbp-verdict--yes { background: #0E7A37; }
+.dbp-verdict--conditions { background: #B45309; }
+.dbp-verdict__label, .dbp-verdict__sub { opacity: 1; }
+
+/* Muted grays fail AA on the warm background — darken on those surfaces */
+.lc-fine-note, .lc-microcopy { color: #5B6270; }
+.dbp-card--warm .dbp-proof { color: #5B6270; }
+.dbp-section--warm .dbp-stat__label { color: #565E6C; }
+
+/* Footer legibility (legal text is the least readable line for seniors) */
+.dbp-footer__legal { color: rgba(255, 255, 255, 0.62); font-size: 12.5px; }
+.dbp-footer__taglines { color: rgba(255, 255, 255, 0.68); }
+
+/* Labeled inputs inside the flex address forms */
+.lc-form .lc-labeled { flex: 1 1 280px; }
+.lc-form .lc-labeled .dbp-input { width: 100%; }
+.lc-form { align-items: flex-end; }
+
+/* Failure notes promoted to alert styling get the amber treatment */
+#handbook-note.lc-lead-fail, #pro-note.lc-lead-fail { font-style: normal; font-size: 14px; }
+#pro-note.lc-lead-fail { color: var(--dbp-dark); }
+#pro-note.lc-lead-fail a { color: var(--dbp-blue); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .lc-loading__rule { animation: none; }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 760px) {
+  .dbp-hero { padding: 36px 20px 28px; }
+  .lc-hero-grid { grid-template-columns: 1fr; gap: 28px; }
+  .lc-hero-plan { max-width: 420px; margin: 0 auto; }
+  .dbp-header__espanol { display: none; }
+  .lc-pro-link { display: none; }
+  .dbp-section { padding: 44px 20px; }
+  .lc-form .dbp-btn { flex: 1 1 100%; }
+  .lc-deal { grid-template-columns: 1fr; }
+  .lc-types { grid-template-columns: 1fr 1fr; }
+  .lc-grid-4 { grid-template-columns: 1fr; }
+  .lc-pro-form { grid-template-columns: 1fr; }
+}
+@media (min-width: 761px) and (max-width: 1080px) {
+  .lc-types { grid-template-columns: 1fr 1fr; }
+  .lc-grid-4 { grid-template-columns: 1fr 1fr; }
+}
+
+</style>
+</head>
+<body>
+<div style="background:#1A1A2E;color:#fff;padding:10px 20px;font:600 12px/1.5 Poppins,sans-serif;letter-spacing:1px;text-transform:uppercase;">
+  Review build · 2026-07-02 · tournament-merged page · the check + all forms are clickable here (mock data — the live page reads real county records)
+</div>
+
+  <!-- ============ HEADER (DS: Header) ============ -->
+  <header class="dbp-header">
+    <div class="dbp-header__brand">
+      <a class="dbp-logo-link" href="https://diazblueprint.com" aria-label="Diaz Blueprint &amp; Drafting Services — diazblueprint.com">
+        <img class="dbp-logo dbp-logo--header" src="data:image/png;base64,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xWlwp8vieBjFVwD1/vefJ/7mGAB/xSkW7fWHvBAREREREVFmc+kBQlQKTnFLRERERERUoP/LXQCiGfkBmeGFwQ8iIiIiIqLCsAcI0Xjs9UFERERERFQ4BkDm6+v+p81ZiAX4AQl+MDEoERERERFRwRgAma86dwFm7gkS+LB5i0FEREREREQ+mAOESOcF0rtmAwY/iIiIiIiIJoM9QIj8fYf0rGnzFoOIiIiIiIi02ANkvuz+VWUtxTzcA/gA+SzbrCUhIiIiIiKiQdgDZL6u9j9tzkJM3COAW/AzJCIiIiIimjz2ACE69gTgE4AtGPwgIiIiIiKaBfYAIercA9gBuMtdECIiIiIiIgqLARAiCXzUYG8PIiIiIiKi2WIAhJbqBdLTowYTmxIREREREc0eAyC0NI/ohrk8Zy4LERERERERJcIACC2B6+2xA/CQuSxERERERESUAQMgNGffIYEPJjUlIiIiIiJaOAZAaE5cT487SEJTDnEhIiIiIiIiAAyA0PQ9QoIdLuhBREREREREdIQBEJqaJ0igw73afEUhIiIiIiKiqWAAhEr2Aklaavc/H8CABxEREREREQ3AAAiV4h6Ss+MBDHYQERERERFRYAyAUGxP6AIZLsCB/c/n3k8iIiIiIiKiaH75+fNn7jLQMFsA64O/teiCDebE35z1fv2QTu2HiIiIiIiIqAgMgBARERERERHR7P1f7gIQEREREREREcXGAAgRERERERERzR4DIEREREREREQ0ewyAEBEREREREdHsMQBCRERERERERLPHAAgRERERERERzR4DIEREREREREQ0ewyAEBEREREREdHsMQBCRERERERERLPHAAgRERERERERzR4DIEREREREREQ0ewyAEBEREREREdHsMQBCRERERERERLPHAAgRERERERERzd7/D5c1KusVI6LIAAAAAElFTkSuQmCC" width="160" height="40" alt="Diaz Blueprint &amp; Drafting Services" />
+      </a>
+      <span class="dbp-header__est">Est. 1991</span>
+    </div>
+    <div class="dbp-header__contact">
+      <a class="lc-pro-link" href="#pro-lane">Contractors &amp; investors</a>
+      <a class="dbp-phone" href="tel:+13235668096">323.566.8096</a>
+      <span class="dbp-header__espanol">Hablamos Español</span>
+    </div>
+  </header>
+  <p id="sr-status" class="visually-hidden" role="status"></p>
+
+  <!-- ============ HERO (DS: Hero) ============ -->
+  <section class="dbp-hero" id="top">
+    <div class="dbp-hero__inner">
+      <div class="lc-hero-grid">
+        <div class="lc-hero-copy">
+          <h1>The casita projects that fail usually fail at&nbsp;the&nbsp;lot.</h1>
+          <p class="dbp-hero__sub">Before the plans, before the permits, before a dollar is spent — setbacks, space, and the county records decide it. Enter your address and check all three, free, in about two minutes. If your lot doesn't work, we'll tell you that too.</p>
+          <p class="dbp-hero__espanol" lang="es">Si su lote no funciona, se lo decimos. La respuesta es gratis. Hablamos&nbsp;Español.</p>
+
+          <form id="lotcheck-form" class="lc-form">
+            <div class="lc-labeled">
+              <label for="address-input">Your property address</label>
+              <input
+                id="address-input"
+                name="address"
+                class="dbp-input"
+                type="text"
+                inputmode="text"
+                autocomplete="street-address"
+                placeholder="e.g. 4321 Tweedy Blvd, South Gate"
+                required
+                aria-describedby="form-microcopy"
+              />
+            </div>
+            <button type="submit" id="check-btn" class="dbp-btn dbp-btn--primary">Check My Lot — Free</button>
+          </form>
+
+          <div class="lc-goalrow" role="group" aria-label="Who would the casita be for?">
+            <p class="lc-goalrow__label">Who would the casita be for? <span class="lc-goalrow__hint">Optional — one tap. It points your results at the right next step.</span></p>
+            <div class="lc-goalrow__chips">
+              <button type="button" class="lc-chipbtn" aria-pressed="false" data-goal="family" data-plan-label="CASITA DE MAMÁ">For mom — <span lang="es">los abuelos</span></button>
+              <button type="button" class="lc-chipbtn" aria-pressed="false" data-goal="kids" data-plan-label="THE KIDS' CASITA">For my grown kids</button>
+              <button type="button" class="lc-chipbtn" aria-pressed="false" data-goal="rental" data-plan-label="RENTAL CASITA">For a renter — help with the mortgage</button>
+              <button type="button" class="lc-chipbtn" aria-pressed="false" data-goal="office" data-plan-label="STUDIO · OFFICE">For a home office or studio</button>
+              <button type="button" class="lc-chipbtn" aria-pressed="false" data-goal="legacy" data-plan-label="PARA LA FAMILIA">For the next generation</button>
+            </div>
+          </div>
+
+          <p class="lc-microcopy" id="form-microcopy">
+            Free. Just the address — no name, no email needed to see your result. We don't sell your information — we haven't needed to advertise in over 15 years, and we're not starting with you.
+          </p>
+          <p class="lc-hero-call">Prefer to start with a person? Call us: <a href="tel:+13235668096"><strong>323.566.8096</strong></a>. A real person answers, in English or Spanish.</p>
+        </div>
+
+        <div class="lc-hero-plan" aria-hidden="true">
+          <!-- Blueprint-style line drawing: a lot where a dashed casita outline crosses the setback line — the hook, drawn as a plan. Tapping a goal chip relabels the casita. -->
+          <svg viewBox="0 0 360 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Site plan sketch of a backyard casita against the setback line">
+            <rect x="14" y="14" width="332" height="272" fill="none" stroke="#0072CE" stroke-width="1.5" />
+            <!-- setback line (dashed, inside the property line) -->
+            <rect x="34" y="34" width="292" height="232" fill="none" stroke="#0072CE" stroke-opacity=".35" stroke-width="1" stroke-dasharray="4 4" />
+            <text x="42" y="30" class="plan-dim">4'-0" SETBACK</text>
+            <!-- main house -->
+            <rect x="50" y="150" width="150" height="110" fill="none" stroke="#1A1A2E" stroke-width="1.5" />
+            <text x="125" y="210" text-anchor="middle" class="plan-label">EXISTING HOME</text>
+            <!-- the casita that fits (solid) -->
+            <rect x="232" y="52" width="86" height="66" fill="rgba(0,114,206,.07)" stroke="#0072CE" stroke-width="2" />
+            <text id="plan-casita-label" x="275" y="88" text-anchor="middle" class="plan-label plan-label-blue">CASITA</text>
+            <!-- the casita that doesn't (dashed, crossing the rear setback line) -->
+            <rect x="248" y="236" width="64" height="44" fill="none" stroke="#D97706" stroke-width="1.5" stroke-dasharray="5 4" />
+            <text x="280" y="230" text-anchor="middle" class="plan-dim plan-dim--warn">TOO CLOSE</text>
+            <!-- setback arrows -->
+            <line x1="318" y1="34" x2="318" y2="52" stroke="#0072CE" stroke-width="1" />
+            <text x="331" y="47" text-anchor="middle" class="plan-dim">4'</text>
+            <!-- walkway -->
+            <line x1="200" y1="170" x2="232" y2="118" stroke="#1A1A2E" stroke-opacity=".4" stroke-width="1" stroke-dasharray="3 4" />
+            <!-- north arrow -->
+            <circle cx="44" cy="58" r="14" fill="none" stroke="#1A1A2E" stroke-opacity=".5" stroke-width="1" />
+            <path d="M44 48 L48 62 L44 58 L40 62 Z" fill="#1A1A2E" fill-opacity=".55" />
+            <text x="44" y="86" text-anchor="middle" class="plan-dim">N</text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- The deal, plainly (DS: Card--warm) -->
+      <div class="dbp-card dbp-card--warm lc-includes">
+        <h2 class="lc-includes__title">The deal, plainly</h2>
+        <div class="lc-deal">
+          <ul class="dbp-bullets">
+            <li><strong>You get:</strong> whether an ADU — the legal name for a casita — is likely buildable on your lot: detached, attached, garage conversion, or JADU (a junior unit inside your existing house)</li>
+            <li><strong>You get:</strong> the size your lot likely supports — setbacks and lot coverage in plain English — plus a ballpark cost for that kind of build, and your exact next step</li>
+          </ul>
+          <ul class="dbp-bullets">
+            <li><strong>You don't get:</strong> a guarantee. Your city has the final word at plan check, and anyone who promises otherwise is selling something</li>
+            <li><strong>You don't get:</strong> pressure. If the answer is no, you'll hear it plainly — and it costs you nothing</li>
+          </ul>
+        </div>
+        <p class="dbp-proof">35 years of experience · The City of South Gate's top referral for ADU plans · No advertising in 15+ years — every client referred</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RESULTS (hidden until a check runs) ============ -->
+  <section class="lc-results" id="results" hidden>
+    <div class="lc-results__inner">
+      <div id="results-loading" class="lc-loading" hidden>
+        <div class="lc-loading__rule"></div>
+        <p class="lc-loading__text">Reading your lot&hellip;</p>
+        <p class="lc-loading__sub" id="loading-step">Finding your parcel</p>
+        <div id="loading-q" class="lc-loading-q" hidden>
+          <p class="lc-loading-q__label" id="loading-q-label">While it reads your lot — the property is&hellip;</p>
+          <div class="lc-goalrow__chips lc-goalrow__chips--center" role="group" aria-labelledby="loading-q-label">
+            <button type="button" class="lc-chipbtn" aria-pressed="false" data-owner="own">I own this home</button>
+            <button type="button" class="lc-chipbtn" aria-pressed="false" data-owner="helping">I'm helping a family member</button>
+            <button type="button" class="lc-chipbtn" aria-pressed="false" data-owner="looking">I'm looking to buy</button>
+          </div>
+          <button type="button" class="lc-skip" id="owner-skip">skip</button>
+        </div>
+      </div>
+      <div id="results-card" hidden><!-- populated by app.js --></div>
+    </div>
+  </section>
+
+  <!-- ============ THE THREE KILLERS (DS: Section--warm + FeatureCard grid) ============ -->
+  <section class="dbp-section dbp-section--warm">
+    <div class="dbp-section__inner">
+      <h2>Three things end casita plans early</h2>
+      <p class="dbp-section__lede">A backyard home is a six-figure decision. For 35 years we've watched projects end at the same three places — usually after money was already spent. Check them in this order.</p>
+      <div class="dbp-grid">
+        <div class="dbp-feature">
+          <h3 class="dbp-feature__title">1 · Setbacks</h3>
+          <div class="dbp-feature__body">The required distance between a new build and your property lines — California's baseline is 4 feet at the side and rear for a new detached ADU. The yard you see and the yard you can build in are different shapes. Plenty of projects get sketched, priced, and promised before anyone measures.
+            <details class="lc-more"><summary>Worth knowing</summary><p>Converting an existing garage usually doesn't trigger new setbacks — you're staying inside a footprint that already exists.</p></details>
+          </div>
+        </div>
+        <div class="dbp-feature">
+          <h3 class="dbp-feature__title">2 · Space</h3>
+          <div class="dbp-feature__body">Your city must allow an ADU of at least 800 square feet, and no city may turn you away for having a small lot — that's state law. But what fits on your lot depends on what's already on it. Some yards hold a two-bedroom. Some hold a studio. Some hold nothing new — and it's better to know before you borrow.
+            <details class="lc-more"><summary>Worth knowing</summary><p>A JADU — up to 500 square feet inside your existing home — needs no yard at all. When the yard says no, it's often the door still open.</p></details>
+          </div>
+        </div>
+        <div class="dbp-feature">
+          <h3 class="dbp-feature__title">3 · The records</h3>
+          <div class="dbp-feature__body">What the county has on paper — lot size, land use, how the parcel is recorded — doesn't always match what you see from the sidewalk. Unusual records don't always mean no. But they stop more projects than any neighbor's opinion, because nobody checks until the city does.
+            <details class="lc-more"><summary>Worth knowing</summary><p>Once your city accepts a complete ADU application, state law puts the review on a 60-day clock.</p></details>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THE REASONS RARELY CHANGE (DS: Section + FeatureCard grid) ============ -->
+  <section class="dbp-section">
+    <div class="dbp-section__inner">
+      <h2>The reasons rarely change</h2>
+      <p class="dbp-section__lede">Margarita has drawn plans for the same streets since 1991, and the story that walks in the door rarely changes. Mom is getting older, and the drive across town keeps getting longer. A grown kid is priced out of the neighborhood they grew up in. The house that raised everyone is one bedroom short. For a lot of families, the answer has been sitting in the backyard the whole time.</p>
+      <div class="dbp-grid lc-grid-4">
+        <div class="dbp-feature">
+          <h3 class="dbp-feature__title">A place for mom.</h3>
+          <div class="dbp-feature__body">La suegra, los abuelos — a small home of their own, steps from your kitchen door. Close enough for Sunday dinner, separate enough for everyone's peace.</div>
+        </div>
+        <div class="dbp-feature">
+          <h3 class="dbp-feature__title">Kids who can stay close.</h3>
+          <div class="dbp-feature__body">A casita lets your grown kids stay in the community they grew up in — close to family, close to work, close to Sunday dinner.</div>
+        </div>
+        <div class="dbp-feature">
+          <h3 class="dbp-feature__title">Rent that helps with the mortgage.</h3>
+          <div class="dbp-feature__body">A permitted casita can bring in steady rent — help with the payment now, a cushion later. Some families rent it out first and keep it ready for the day mom needs it.</div>
+        </div>
+        <div class="dbp-feature">
+          <h3 class="dbp-feature__title">Something to hand down.</h3>
+          <div class="dbp-feature__body">A permitted casita hands your kids options — a home for family, or steady income — and clean paperwork instead of a headache.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THE TOOL + THE FOUR TYPES (DS: Section--warm + Steps) ============ -->
+  <section class="dbp-section dbp-section--warm">
+    <div class="dbp-section__inner">
+      <h2>The Lot Check reads all three. Free.</h2>
+      <p class="dbp-section__lede">
+        Until now, the first answer meant paying a professional for a feasibility opinion, or decoding zoning documents that read
+        like legal filings. We think the first answer should be free — so we built the Lot Check to give it away.
+      </p>
+      <ol class="dbp-steps">
+        <li><strong>Enter your address.</strong> That's all it needs — no email, no account, no callback you didn't ask for.</li>
+        <li><strong>It reads your lot against California's ADU rules</strong> — setbacks, space, and the county records — and answers in plain English, in about two minutes.</li>
+        <li><strong>You decide what's next.</strong> It's your home. No pressure either way.</li>
+      </ol>
+
+      <h3 class="lc-types-title">Four ways a casita happens</h3>
+      <div class="lc-types">
+        <details class="lc-type">
+          <summary><svg viewBox="0 0 48 36" aria-hidden="true"><rect x="4" y="4" width="22" height="28" fill="none" stroke="#1A1A2E" stroke-width="1.5"/><rect x="32" y="8" width="12" height="12" fill="rgba(0,114,206,.1)" stroke="#0072CE" stroke-width="1.5"/></svg>Detached</summary>
+          <p>Its own four walls in the yard. Needs the most room — 4-foot side and rear setbacks.</p>
+        </details>
+        <details class="lc-type">
+          <summary><svg viewBox="0 0 48 36" aria-hidden="true"><rect x="6" y="6" width="24" height="24" fill="none" stroke="#1A1A2E" stroke-width="1.5"/><rect x="30" y="12" width="12" height="18" fill="rgba(0,114,206,.1)" stroke="#0072CE" stroke-width="1.5"/></svg>Attached</summary>
+          <p>Shares a wall with your house. A fit when the yard is tight on one side.</p>
+        </details>
+        <details class="lc-type">
+          <summary><svg viewBox="0 0 48 36" aria-hidden="true"><rect x="6" y="6" width="22" height="24" fill="none" stroke="#1A1A2E" stroke-width="1.5"/><rect x="32" y="14" width="12" height="16" fill="rgba(0,114,206,.1)" stroke="#0072CE" stroke-width="1.5" stroke-dasharray="3 2"/></svg>Garage conversion</summary>
+          <p>Uses the footprint you already have — usually no new setbacks to fight.</p>
+        </details>
+        <details class="lc-type">
+          <summary><svg viewBox="0 0 48 36" aria-hidden="true"><rect x="8" y="6" width="32" height="24" fill="none" stroke="#1A1A2E" stroke-width="1.5"/><rect x="26" y="14" width="12" height="16" fill="rgba(0,114,206,.1)" stroke="#0072CE" stroke-width="1.5"/></svg>JADU</summary>
+          <p>Up to 500 square feet inside the existing house. The smallest yes, and sometimes the only one.</p>
+        </details>
+      </div>
+      <p class="lc-fine-note">The check tells you which of these your lot likely supports — <em>"likely" is deliberate; your city has the final say.</em></p>
+    </div>
+  </section>
+
+  <!-- ============ WHAT WE TELL YOU WHEN THE ANSWER IS NO (DS: Section + OutcomeCard grid) ============ -->
+  <section class="dbp-section">
+    <div class="dbp-section__inner">
+      <h2>What we tell you when the answer is no</h2>
+      <p class="dbp-section__lede">The Lot Check gives one of three verdicts. None of them is a guarantee — and one of them is us telling you to slow down. Here's what each means, plainly.</p>
+      <div class="dbp-grid">
+        <div class="dbp-outcome dbp-outcome--yes">
+          <h3 class="dbp-outcome__title">"Likely Buildable."</h3>
+          <div class="dbp-outcome__body">Your lot looks workable under state ADU rules. "Likely" stays in the sentence because your city has the final say at plan check. The next step is permit-ready plans — and you'll know the price before you commit to anything.</div>
+        </div>
+        <div class="dbp-outcome dbp-outcome--conditions">
+          <h3 class="dbp-outcome__title">"Likely Buildable — with conditions."</h3>
+          <div class="dbp-outcome__body">Your lot works, just not the way you pictured. A garage conversion instead of a detached unit. A studio instead of a two-bedroom. The lots other designers walk away from usually get referred to us — this verdict is our home turf, and we stay with it until it's approved.</div>
+        </div>
+        <div class="dbp-outcome dbp-outcome--look">
+          <h3 class="dbp-outcome__title">"Needs a Closer Look."</h3>
+          <div class="dbp-outcome__body">The records couldn't give a straight answer — unusual parcels, mixed use, missing data. The automated check stops there on purpose. A person takes over: Margarita's team reads it free, the way we've read lots since 1991.</div>
+        </div>
+      </div>
+      <p class="lc-no-paragraph">And when a lot truly doesn't work? We say so. A plain no, the reason for it, and whatever path is honestly still open — a JADU, a room addition, or nothing at all. No "let's explore your options" meeting. No plan set you don't need. An honest no costs you nothing; a polite maybe costs families thousands. <em class="lc-espanol-inline" lang="es">Si no se puede, se lo decimos — y no le cuesta nada.</em></p>
+      <p class="lc-fine-note"><em>The Lot Check is a feasibility check, not a permit. It's the same first look we've given lots since 1991 — the look that tells you whether it's worth going further.</em></p>
+    </div>
+  </section>
+
+  <!-- ============ WHY FREE + REAL PRICES (DS: Section--warm narrow) ============ -->
+  <section class="dbp-section dbp-section--warm">
+    <div class="dbp-section__inner dbp-section__inner--narrow">
+      <h2>Why it's free — and what the rest costs</h2>
+      <p>
+        Honest answer: if your lot works and you decide to build, we'd like to be the ones who draw your plans.
+        That's the whole business. No pressure, no fine print. The check costs you nothing either way.
+      </p>
+      <p>
+        And while we're being plain about money: permit-ready plan sets start at $4,800, priced by your project.
+        A full ADU set typically runs $9,000–$14,000 — about $12 to $16 per square foot. The plans are the small number.
+        The build is the big one. That's exactly why you check the lot before you spend either.
+      </p>
+      <div class="lc-facts lc-facts--center">
+        <span class="dbp-stat"><span class="dbp-stat__num">from $4,800</span><span class="dbp-stat__label">permit-ready plan sets, priced by project</span></span>
+        <span class="dbp-stat"><span class="dbp-stat__num">$9–14K</span><span class="dbp-stat__label">typical full ADU set (~$12–16 per sq ft)</span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRUST (DS: Section--dark + BulletList) ============ -->
+  <section class="dbp-section dbp-section--dark">
+    <div class="dbp-section__inner">
+      <h2>Your neighbor's recommendation</h2>
+      <p class="dbp-section__lede">
+        Diaz Blueprint &amp; Drafting Services was founded in 1991 by J. Margarita Diaz, our architect-educated principal designer,
+        and Carlos A. Diaz Sr. Same family, same phone number.
+      </p>
+      <ul class="dbp-bullets">
+        <li><strong>The City of South Gate's top referral for ADU plans.</strong> When the people who review plans for a living point homeowners somewhere, they point here.</li>
+        <li><strong>No advertising in over 15 years.</strong> Every client arrived referred — by a neighbor, a cousin, a contractor, or the city counter. A referral business only survives if people were told the truth.</li>
+        <li><strong>5.0 stars on Google, 8 reviews.</strong> "Professional, on time and honest… 5+ projects." <span lang="es">"Seriedad y honradez profesional."</span> Two different reviews, one word in common.</li>
+        <li><strong>Hablamos Español.</strong> The actual people drawing your plans — not a translated brochure.</li>
+      </ul>
+      <p>"Get your project to the finish line," another review says. That's the job: plans that pass, and the truth on the way there.</p>
+      <p class="lc-trust-espanol" lang="es">Aquí estamos desde 1991, ayudando a familias como la suya a construir para los suyos. Llámenos: <a href="tel:+13235668096"><strong>323.566.8096</strong></a>.</p>
+    </div>
+  </section>
+
+  <!-- ============ FAQ (DS: Section + native accordion) ============ -->
+  <section class="dbp-section">
+    <div class="dbp-section__inner dbp-section__inner--narrow">
+      <h2>The questions families actually ask</h2>
+      <p class="dbp-section__lede">Asked across our counter for 35 years. Answered the same way here.</p>
+      <div class="lc-faq">
+        <details><summary>What do plans cost?</summary><p>Permit-ready plan sets start at $4,800, priced by your project. Full ADU sets typically run $9–14K — about $12 to $16 per square foot. The honest framing: the plans are the small number. The build is the big number. The Lot Check exists so you know whether to spend either.</p></details>
+        <details><summary>What does the whole casita cost to build?</summary><p>It depends on size, type, and your lot — which is why we don't print one number here. The Lot Check gives a ballpark range for the type your lot likely supports. Real ranges, not wishes.</p></details>
+        <details><summary>Will it rent for enough to cover the payment?</summary><p>We don't promise rent figures — nobody honest can. What we can say: a permitted casita is the kind that can be rented legally, insured, and counted when you sell. Numbers that big deserve a lender's math, not a landing page's.</p></details>
+        <details><summary>Do I need an architect?</summary><p>For most casitas, what you need is a permit-ready plan set your city will approve. That's drafting — our trade since 1991. Margarita, our principal designer, is architect-educated, and some projects do call for added engineering. When yours does, we'll say so plainly.</p></details>
+        <details><summary>How long does it all take?</summary><p>We don't guarantee timelines — cities differ, and we won't pretend otherwise. What state law does set: a 60-day review clock once your application is complete. Our job is making sure it goes in complete.</p></details>
+        <details><summary>What if the check says my lot needs a closer look?</summary><p>Some lots can't be read automatically — unusual records, mixed use, missing data. That's not a no. Call us and Margarita's team will read it in person, the way we have since 1991. And if the answer is no, we'll say that too.</p></details>
+        <details lang="es"><summary>¿Hablan español de verdad?</summary><p>Sí. Las personas que dibujan sus planos lo hablan — no es un folleto traducido. Llámenos y verá: 323.566.8096.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HANDBOOK (DS: Section--warm narrow, email capture) ============ -->
+  <section class="dbp-section dbp-section--warm">
+    <div class="dbp-section__inner dbp-section__inner--narrow">
+      <h2>Not ready to type your address? Fair.</h2>
+      <p>
+        Some people want to read first. The <strong>Owner-Managed ADU &amp; JADU Handbook</strong> covers what to check, what
+        things cost, and how the process runs — written plainly, in the same voice as this page. It's free for an email,
+        and the download opens right here — no inbox hoops.
+      </p>
+      <form id="handbook-form" class="lc-form lc-form--center">
+        <div class="lc-labeled">
+          <label for="handbook-email">Your email</label>
+          <input id="handbook-email" class="dbp-input" type="email" name="email" autocomplete="email" placeholder="e.g. maria@gmail.com" required />
+        </div>
+        <button type="submit" class="dbp-btn dbp-btn--primary">Send Me the Handbook — Free</button>
+      </form>
+      <p class="lc-microcopy lc-microcopy--center" id="handbook-note" aria-live="polite">The handbook is the whole transaction. No newsletter you didn't ask for.</p>
+    </div>
+  </section>
+
+  <!-- ============ PRO LANE (DS: Section--dark) ============ -->
+  <section class="dbp-section dbp-section--dark" id="pro-lane">
+    <div class="dbp-section__inner">
+      <p class="lc-kicker">The pro lane — contractors &amp; investors</p>
+      <h2>Built to pass.</h2>
+      <p class="dbp-section__lede">
+        We're a drafting firm — that's the whole business. For 35 years we've drawn residential plans across Southeast LA,
+        and the pitch to people who build for a living is short: clean sets, straight pricing, and plan-check experience
+        across Southeast LA and beyond.
+      </p>
+      <div class="dbp-grid">
+        <div class="dbp-feature dbp-feature--dark">
+          <h3 class="dbp-feature__title">The 60-day clock starts when the set is complete.</h3>
+          <div class="dbp-feature__body">State law gives a city 60 days to review a complete ADU application. Incomplete sets don't get slow reviews — they get sent back, and the clock restarts. We've submitted plans across Southeast LA since 1991; we know what these counters ask for. And when a set draws corrections anyway, we stay with it until it's approved.</div>
+        </div>
+        <div class="dbp-feature dbp-feature--dark">
+          <h3 class="dbp-feature__title">Pricing, published.</h3>
+          <div class="dbp-feature__body">Permit-ready plan sets from $4,800, priced by project. Full ADU sets typically run $9–14K — about $12 to $16 a square foot. No fine print; drawing plans is all we sell. <em>"Professional, on time and honest… 5+ projects" — from our Google reviews. Repeat work is the only advertising we've done in 15 years.</em></div>
+        </div>
+        <div class="dbp-feature dbp-feature--dark">
+          <h3 class="dbp-feature__title">Weighing more than one lot? Run them all.</h3>
+          <div class="dbp-feature__body">The Lot Check is free and doesn't mind how many addresses you try. It's a first look, not underwriting — hedged on purpose — but two minutes per address tells you which lots deserve your afternoon. For the ones that matter, call and we'll give the parcel a human read.</div>
+        </div>
+      </div>
+      <div class="lc-pro-form-wrap">
+        <h3 class="lc-pro-form-title">Tell us what you build</h3>
+        <p class="lc-pro-lede">Leave your numbers and we'll call you back to talk projects and pricing. If you run multiple projects a year, good working relationships run both directions — that's how this firm has grown since 1991.</p>
+        <form id="pro-form" class="lc-pro-form">
+          <div class="lc-labeled"><label for="pro-name">Your name</label><input id="pro-name" class="dbp-input" type="text" name="name" autocomplete="name" required /></div>
+          <div class="lc-labeled"><label for="pro-phone">Direct phone</label><input id="pro-phone" class="dbp-input" type="tel" name="phone" autocomplete="tel" required /></div>
+          <div class="lc-labeled"><label for="pro-company">Company <span class="lc-optional">(optional)</span></label><input id="pro-company" class="dbp-input" type="text" name="company" autocomplete="organization" /></div>
+          <div class="lc-labeled"><span class="lc-labeled__label" id="pro-vol-label">Projects per year</span>
+            <div class="lc-goalrow__chips" role="group" aria-labelledby="pro-vol-label">
+              <button type="button" class="lc-chipbtn lc-chipbtn--dark" aria-pressed="false" data-volume="1–2">1–2</button>
+              <button type="button" class="lc-chipbtn lc-chipbtn--dark" aria-pressed="false" data-volume="3–10">3–10</button>
+              <button type="button" class="lc-chipbtn lc-chipbtn--dark" aria-pressed="false" data-volume="10+">10+</button>
+            </div>
+          </div>
+          <button type="submit" class="dbp-btn dbp-btn--primary">Have Us Call About Your Projects</button>
+        </form>
+        <p class="lc-microcopy lc-microcopy--dark" id="pro-note" aria-live="polite">Or skip the form: call <a href="tel:+13235668096"><strong>323.566.8096</strong></a> and say you build. You'll get the same family that's answered this line since 1991.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA (DS: Section--cta) ============ -->
+  <section class="dbp-section dbp-section--cta">
+    <div class="dbp-section__inner dbp-section__inner--narrow">
+      <h2>A no today is free. A no next year is expensive.</h2>
+      <p class="dbp-section__lede">And a likely yes today comes with a next step. Free, about two minutes, no email — just your address.</p>
+      <form class="lc-form lc-form--center lotcheck-form-bottom" data-mirror="lotcheck-form">
+        <div class="lc-labeled">
+          <label for="address-input-bottom">Your property address</label>
+          <input id="address-input-bottom" class="dbp-input" type="text" name="address" autocomplete="street-address" placeholder="e.g. 4321 Tweedy Blvd, South Gate" required />
+        </div>
+        <button type="submit" class="dbp-btn dbp-btn--primary">Check My Lot — Free</button>
+      </form>
+      <p class="lc-hero-call">Rather talk it through first? <a href="tel:+13235668096"><strong>Call us: 323.566.8096</strong></a> · Hablamos Español</p>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER (DS: Footer) ============ -->
+  <footer class="dbp-footer">
+    <a href="https://diazblueprint.com" aria-label="Diaz Blueprint &amp; Drafting Services — diazblueprint.com">
+      <img class="dbp-logo dbp-logo--footer" src="data:image/png;base64,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xWlwp8vieBjFVwD1/vefJ/7mGAB/xSkW7fWHvBAREREREVFmc+kBQlQKTnFLRERERERUoP/LXQCiGfkBmeGFwQ8iIiIiIqLCsAcI0Xjs9UFERERERFQ4BkDm6+v+p81ZiAX4AQl+MDEoERERERFRwRgAma86dwFm7gkS+LB5i0FEREREREQ+mAOESOcF0rtmAwY/iIiIiIiIJoM9QIj8fYf0rGnzFoOIiIiIiIi02ANkvuz+VWUtxTzcA/gA+SzbrCUhIiIiIiKiQdgDZL6u9j9tzkJM3COAW/AzJCIiIiIimjz2ACE69gTgE4AtGPwgIiIiIiKaBfYAIercA9gBuMtdECIiIiIiIgqLARAiCXzUYG8PIiIiIiKi2WIAhJbqBdLTowYTmxIREREREc0eAyC0NI/ohrk8Zy4LERERERERJcIACC2B6+2xA/CQuSxERERERESUAQMgNGffIYEPJjUlIiIiIiJaOAZAaE5cT487SEJTDnEhIiIiIiIiAAyA0PQ9QoIdLuhBREREREREdIQBEJqaJ0igw73afEUhIiIiIiKiqWAAhEr2Aklaavc/H8CABxEREREREQ3AAAiV4h6Ss+MBDHYQERERERFRYAyAUGxP6AIZLsCB/c/n3k8iIiIiIiKiaH75+fNn7jLQMFsA64O/teiCDebE35z1fv2QTu2HiIiIiIiIqAgMgBARERERERHR7P1f7gIQEREREREREcXGAAgRERERERERzR4DIEREREREREQ0ewyAEBEREREREdHsMQBCRERERERERLPHAAgRERERERERzR4DIEREREREREQ0ewyAEBEREREREdHsMQBCRERERERERLPHAAgRERERERERzR4DIEREREREREQ0ewyAEBEREREREdHsMQBCRERERERERLPHAAgRERERERERzd7/D5c1KusVI6LIAAAAAElFTkSuQmCC" width="128" height="32" alt="Diaz Blueprint &amp; Drafting Services" />
+    </a>
+    <div>
+      Est. 1991 · <a href="https://diazblueprint.com">diazblueprint.com</a> ·
+      <a href="tel:+13235668096"><strong>323.566.8096</strong></a> · Serving Los Angeles &amp; Orange Counties
+    </div>
+    <p class="dbp-footer__taglines"><em>Plans that pass. People who care. · <span lang="es">Desde 1991. Para tu familia.</span></em></p>
+    <p class="dbp-footer__legal">
+      The Lot Check is an automated feasibility estimate based on public county records and California state ADU law.
+      It is not a permit, a zoning determination, or a guarantee of approval. Final requirements are set by your city
+      during plan check. Results are stated as "likely" for a reason — call us for a human review of your specific lot. 323.566.8096.
+    </p>
+  </footer>
+
+  <script>
+/* REVIEW BUILD ONLY: mock /api so the full experience is clickable offline. */
+(function () {
+  const realFetch = window.fetch.bind(window);
+  const YES = {"ok":true,"verdict":"yes","matchedAddress":"4321 Elm St, South Gate, CA 90280","county":"Los Angeles","headline":"Your lot reads as a likely candidate for a backyard casita under state ADU rules.","facts":[{"num":"5,812","label":"sq ft lot"},{"num":"Single-family","label":"land use on file"}],"types":[{"name":"Detached ADU","status":"eligible","note":"Likely fits with 4-ft side/rear setbacks"},{"name":"Garage conversion","status":"eligible","note":"Existing footprint — usually no new setbacks"},{"name":"JADU","status":"maybe","note":"Up to 500 sq ft inside the existing home"}],"costs":[{"name":"Detached ADU","range":"$180K–$320K","note":"ballpark build"},{"name":"Garage conversion","range":"$120K–$180K","note":"ballpark build"}],"notes":["Your city has the final say at plan check — results are stated as likely on purpose."],"nextStep":"A human read of your lot is free — call us or leave your number and Margarita’s team will call you back."};
+  window.fetch = function (url, opts) {
+    if (typeof url === 'string' && url.startsWith('/api/')) {
+      const delay = url === '/api/check' ? 4500 : 600;
+      return new Promise((resolve) => setTimeout(() => resolve({
+        ok: true,
+        json: () => Promise.resolve(url === '/api/check' ? YES : { ok: true }),
+      }), delay));
+    }
+    if (typeof url === 'string' && url.indexOf('formspree.io') !== -1) {
+      return new Promise((resolve) => setTimeout(() => resolve({
+        ok: true, json: () => Promise.resolve({ ok: true }),
+      }), 600));
+    }
+    return realFetch(url, opts);
+  };
+})();
+</script>
+<script>
+/* Diaz Blueprint — Lot Check frontend
+   Feasibility: POSTs to /api/check (Cloudflare Pages Function, live county data).
+   Leads (callback / handbook / pro): POST to Formspree via submitLead() — set
+   FORMSPREE_ENDPOINT below. Until it's set, submitLead resolves ok:false so the
+   page honestly routes to the phone instead of faking a captured lead.
+   Qualification is never a gate: goal chips sit by the hero form, the owner
+   question fills the loading wait, timeline is asked on the result card. All
+   answers are optional and ride along with the lead payload. */
+
+(function () {
+  const resultsSection = document.getElementById('results');
+  const loadingEl = document.getElementById('results-loading');
+  const loadingStep = document.getElementById('loading-step');
+  const loadingQ = document.getElementById('loading-q');
+  const cardEl = document.getElementById('results-card');
+
+  const VERDICTS = {
+    yes: { cls: 'dbp-verdict--yes', label: 'YOUR LOT CHECK RESULT', title: 'Likely Buildable' },
+    conditions: { cls: 'dbp-verdict--conditions', label: 'YOUR LOT CHECK RESULT', title: 'Likely Buildable — with conditions' },
+    look: { cls: 'dbp-verdict--look', label: 'YOUR LOT CHECK RESULT', title: 'Needs a Closer Look' },
+  };
+
+  const LOADING_STEPS = [
+    'Finding your parcel',
+    'Reading lot size and land use',
+    'Applying California ADU rules',
+    'Putting your results in plain English',
+  ];
+
+  // Goal-tailored next-step lines (result card). Keys match the hero chips.
+  const GOAL_LINES = {
+    family: 'You said this is for family. If the lot holds it, we’ll talk about what keeps a parent close but comfortable — the kind of plan we’ve drawn since 1991.',
+    kids: 'You said it’s for your grown kids. If the lot holds it, we’ll talk about a place that lets them stay in the neighborhood — close to family, with their own front door.',
+    rental: 'You said rental income. We won’t promise a rent number — nobody can promise you that. We can tell you what’s likely buildable and what it likely costs; the rest is your math.',
+    office: 'You said office or studio. Smaller footprints clear lot problems more often — worth an honest look at what your setbacks leave you.',
+    legacy: 'You said it’s for the next generation. Drawn right and permitted, one property can carry two generations — worth doing on paper, the legal way.',
+  };
+
+  // Verdict-tailored lead-ask line, directly above the form.
+  const VERDICT_ASKS = {
+    yes: 'Your lot looks likely. The next step is a human read of the details — free, on the phone, before you spend anything.',
+    conditions: 'Conditions are where 35 years earns its keep. Ask us what your version of workable looks like — the call is free either way.',
+    look: 'The records couldn’t give you a straight answer. A person can — free. And if the answer is no, you’ll have it before you’ve spent a dollar.',
+  };
+
+  // Owner-status additions to the lead microcopy.
+  const OWNER_NOTES = {
+    helping: 'Bring them into the call — we’ll talk with whoever the decision belongs to, in English or Spanish.',
+    looking: 'Checking before you buy is the right order. We can read the lot before you’re locked in.',
+  };
+
+  let stepTimer = null;
+  let checking = false;
+  const SCROLL = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+  const srStatus = document.getElementById('sr-status');
+
+  // Qualification state — all optional, captured without gating anything.
+  const qual = { goal: '', owner: '', timeline: '', callfor: 'me' };
+
+  // Capture where this visit came from (UTM tags / referrer) once, for lead
+  // attribution. Stored with the lead so we can tell which channel converts.
+  const LEAD_SOURCE = (function () {
+    try {
+      const p = new URLSearchParams(location.search);
+      const keys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid', 'fbclid'];
+      const parts = [];
+      keys.forEach((k) => { const v = p.get(k); if (v) parts.push(k + '=' + v); });
+      if (!parts.length && document.referrer) parts.push('ref=' + document.referrer);
+      return parts.join('&').slice(0, 300);
+    } catch (e) {
+      return '';
+    }
+  })();
+
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+
+  /* ---------- Lead capture via Formspree ----------
+     Create a form at formspree.io and paste its endpoint below — it looks like
+     https://formspree.io/f/abcdwxyz . One form handles all three lead kinds; the
+     _subject line tells them apart in the inbox. Until the real ID is pasted,
+     submitLead resolves ok:false and the page tells the visitor to call. */
+  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/reviewform';
+  const LEAD_SUBJECTS = {
+    callback: 'New Lot Check lead — callback',
+    handbook: 'New ADU Handbook download',
+    pro: 'New contractor / investor lead',
+  };
+  function submitLead(payload) {
+    if (!FORMSPREE_ENDPOINT || FORMSPREE_ENDPOINT.indexOf('REPLACE_WITH_FORM_ID') !== -1) {
+      return Promise.resolve({ ok: false }); // not configured — never fake a capture
+    }
+    const body = Object.assign({ _subject: LEAD_SUBJECTS[payload.kind] || LEAD_SUBJECTS.callback }, payload);
+    return fetch(FORMSPREE_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify(body),
+    })
+      .then((r) => ({ ok: r.ok }))
+      .catch(() => ({ ok: false }));
+  }
+
+  /* ---------- Hero goal chips: one tap, relabels the site-plan casita ---------- */
+  const planLabel = document.getElementById('plan-casita-label');
+  document.querySelectorAll('.lc-goalrow .lc-chipbtn').forEach((btn) => {
+    btn.addEventListener('click', function () {
+      const on = btn.classList.contains('lc-chipbtn--on');
+      document.querySelectorAll('.lc-goalrow .lc-chipbtn').forEach((b) => { b.classList.remove('lc-chipbtn--on'); b.setAttribute('aria-pressed', 'false'); });
+      const setLabel = (t) => {
+        if (!planLabel) return;
+        planLabel.textContent = t;
+        planLabel.classList.toggle('plan-label--small', t.length > 8);
+      };
+      if (on) {
+        qual.goal = '';
+        setLabel('CASITA');
+      } else {
+        btn.classList.add('lc-chipbtn--on');
+        btn.setAttribute('aria-pressed', 'true');
+        qual.goal = btn.dataset.goal;
+        setLabel(btn.dataset.planLabel || 'CASITA');
+      }
+    });
+  });
+
+  /* ---------- Loading-wait owner question (optional, never delays results) ---------- */
+  function showOwnerQuestion() {
+    if (!loadingQ) return;
+    if (qual.owner) { loadingQ.hidden = true; return; }
+    loadingQ.hidden = false;
+  }
+  if (loadingQ) {
+    loadingQ.querySelectorAll('[data-owner]').forEach((btn) => {
+      btn.addEventListener('click', function () {
+        qual.owner = btn.dataset.owner;
+        loadingQ.innerHTML = '<p class="lc-loading-q__label" tabindex="-1">Got it. Your answer will speak to that.</p>';
+        const msg = loadingQ.querySelector('p');
+        if (msg) msg.focus({ preventScroll: true });
+      });
+    });
+    const skip = document.getElementById('owner-skip');
+    if (skip) skip.addEventListener('click', function () { loadingQ.hidden = true; });
+  }
+
+  function startLoading() {
+    resultsSection.hidden = false;
+    cardEl.hidden = true;
+    loadingEl.hidden = false;
+    let i = 0;
+    loadingStep.textContent = LOADING_STEPS[0];
+    if (srStatus) srStatus.textContent = 'Reading your lot — results will appear below.';
+    stepTimer = setInterval(() => {
+      i = Math.min(i + 1, LOADING_STEPS.length - 1);
+      loadingStep.textContent = LOADING_STEPS[i];
+    }, 2200);
+    showOwnerQuestion();
+    resultsSection.scrollIntoView({ behavior: SCROLL, block: 'start' });
+  }
+
+  function stopLoading() {
+    clearInterval(stepTimer);
+    loadingEl.hidden = true;
+  }
+
+  function typeChip(t) {
+    const cls = t.status === 'eligible' ? ' dbp-chip--eligible' : t.status === 'maybe' ? ' dbp-chip--maybe' : '';
+    return (
+      '<div class="dbp-chip' + cls + '">' +
+      '<span class="dbp-chip__name">' + esc(t.name) + '</span>' +
+      '<span class="dbp-chip__note">' + esc(t.note) + '</span>' +
+      '</div>'
+    );
+  }
+
+  function render(data) {
+    const v = VERDICTS[data.verdict] || VERDICTS.look;
+
+    // Per-card qualification state resets so a second check never submits
+    // answers the fresh card doesn't show.
+    qual.timeline = '';
+    qual.callfor = 'me';
+    if (qual.ownerInferred) { qual.owner = ''; qual.ownerInferred = false; }
+
+    let html = '<div class="dbp-result">';
+
+    html +=
+      '<div class="dbp-verdict ' + v.cls + '">' +
+      '<div class="dbp-verdict__label">' + v.label + '</div>' +
+      '<h2 class="dbp-verdict__title" tabindex="-1">' + esc(v.title) + '</h2>' +
+      (data.matchedAddress
+        ? '<p class="dbp-verdict__sub">' + esc(data.matchedAddress) +
+          (data.county ? ' · ' + esc(data.county) + ' County' : '') + '</p>'
+        : '') +
+      '</div>';
+
+    html += '<div class="dbp-result__body">';
+
+    if (data.headline) {
+      html += '<div class="lc-result-section"><p>' + esc(data.headline) + '</p></div>';
+    }
+
+    if (data.facts && data.facts.length) {
+      html +=
+        '<div class="lc-result-section"><h4>Your lot, from county records</h4><div class="lc-facts">' +
+        data.facts.map(f =>
+          '<span class="dbp-stat"><span class="dbp-stat__num">' + esc(f.num) + '</span>' +
+          '<span class="dbp-stat__label">' + esc(f.label) + '</span></span>'
+        ).join('') +
+        '</div></div>';
+    }
+
+    if (data.types && data.types.length) {
+      html +=
+        '<div class="lc-result-section"><h4>What likely fits</h4><div class="dbp-grid">' +
+        data.types.map(typeChip).join('') +
+        '</div></div>';
+    }
+
+    if (data.costs && data.costs.length) {
+      html +=
+        '<div class="lc-result-section"><h4>Ballpark cost to build</h4><div class="dbp-grid">' +
+        data.costs.map(c =>
+          '<div class="dbp-chip"><span class="dbp-chip__name">' + esc(c.name) + '</span>' +
+          '<span class="dbp-chip__note">' + esc(c.range) + (c.note ? ' · ' + esc(c.note) : '') + '</span></div>'
+        ).join('') +
+        '</div></div>';
+    }
+
+    if (data.notes && data.notes.length) {
+      html +=
+        '<div class="lc-result-section"><h4>Worth knowing</h4><ul class="dbp-bullets">' +
+        data.notes.map(n => '<li>' + esc(n) + '</li>').join('') +
+        '</ul></div>';
+    }
+
+    // ----- Your next step: API line + goal line + verdict-tailored ask -----
+    const goalLine = GOAL_LINES[qual.goal] || '';
+    const verdictAsk = VERDICT_ASKS[data.verdict] || VERDICT_ASKS.look;
+    const ownerNote = OWNER_NOTES[qual.owner] || '';
+
+    html +=
+      '<div class="lc-result-next"><h4>Your next step</h4>' +
+      '<p>' + esc(data.nextStep || 'Call us and we’ll walk you through it — no pressure either way.') + '</p>' +
+      (goalLine ? '<p class="lc-goal-line">' + esc(goalLine) + '</p>' : '') +
+      '<p class="lc-verdict-ask">' + esc(verdictAsk) + '</p>' +
+
+      '<div class="lc-timeline" role="group" aria-label="When would you want to start?">' +
+      '<span class="lc-timeline__label">When would you want to start?</span>' +
+      '<button type="button" class="lc-chipbtn" aria-pressed="false" data-timeline="now">Ready now</button>' +
+      '<button type="button" class="lc-chipbtn" aria-pressed="false" data-timeline="year">Within a year</button>' +
+      '<button type="button" class="lc-chipbtn" aria-pressed="false" data-timeline="exploring">Just exploring</button>' +
+      '</div>' +
+      '<p class="lc-exploring-note" id="exploring-note" hidden>Exploring is fine. The handbook further down this page is made for that — and the number works whenever you’re ready.</p>' +
+
+      '<div class="lc-callfor" role="group" aria-label="Who should we call?">' +
+      '<span class="lc-timeline__label">Who should we call?</span>' +
+      '<button type="button" class="lc-chipbtn lc-chipbtn--on" aria-pressed="true" data-callfor="me">Call me — it’s my house</button>' +
+      '<button type="button" class="lc-chipbtn" aria-pressed="false" data-callfor="family">Call my son or daughter — they help me with these things</button>' +
+      '<button type="button" class="lc-chipbtn" aria-pressed="false" data-callfor="child">I’m the son or daughter — call me</button>' +
+      '</div>' +
+      '<p class="lc-callfor-note" id="callfor-note" hidden></p>' +
+
+      '<div class="lc-cta-row">' +
+      '<a class="dbp-phone" href="tel:+13235668096">Call us: 323.566.8096</a>' +
+      '</div>' +
+      '<form class="lc-lead-form" id="lead-form">' +
+      '<div class="lc-labeled"><label for="lead-name" id="lead-name-label">Name</label>' +
+      '<input id="lead-name" class="dbp-input" type="text" name="name" autocomplete="name" required /></div>' +
+      '<div class="lc-labeled"><label for="lead-phone" id="lead-phone-label">Phone number</label>' +
+      '<input id="lead-phone" class="dbp-input" type="tel" name="phone" autocomplete="tel" required /></div>' +
+      '<button class="dbp-btn dbp-btn--dark dbp-btn--sm" type="submit">Ask for the Honest Read — Free</button>' +
+      '</form>' +
+      '<p class="lc-lead-fail" id="lead-fail" role="alert" hidden>We couldn’t save your number just now, and we won’t pretend we did. ' +
+      'Call us instead: <a href="tel:+13235668096"><strong>323.566.8096</strong></a> — a real person answers, in English or Spanish.</p>' +
+      '<p class="lc-microcopy" id="lead-microcopy">Margarita’s team calls you back about this lot — in English or Spanish. ' +
+      'If it doesn’t work, we’ll tell you that too. No list, no spam.' +
+      (ownerNote ? ' ' + esc(ownerNote) : '') + '</p>' +
+      '</div>';
+
+    html +=
+      '<p class="lc-result-disclaimer">The Lot Check is a feasibility estimate based on public county records and California state ADU law — ' +
+      'not a permit or a zoning determination. Final requirements are set by your city during plan check.</p>';
+
+    html += '</div></div>';
+
+    cardEl.innerHTML = html;
+    cardEl.hidden = false;
+
+    wireResultCard(data);
+    if (srStatus) {
+      srStatus.textContent = 'Result ready: ' + v.title + (data.matchedAddress ? ' for ' + data.matchedAddress : '') + '.';
+    }
+    resultsSection.scrollIntoView({ behavior: SCROLL, block: 'start' });
+    const vt = cardEl.querySelector('.dbp-verdict__title');
+    if (vt) vt.focus({ preventScroll: true });
+  }
+
+  function wireResultCard(data) {
+    // Timeline chips
+    const explNote = document.getElementById('exploring-note');
+    cardEl.querySelectorAll('[data-timeline]').forEach((btn) => {
+      btn.addEventListener('click', function () {
+        cardEl.querySelectorAll('[data-timeline]').forEach((b) => { b.classList.remove('lc-chipbtn--on'); b.setAttribute('aria-pressed', 'false'); });
+        btn.classList.add('lc-chipbtn--on');
+        btn.setAttribute('aria-pressed', 'true');
+        qual.timeline = btn.dataset.timeline;
+        if (explNote) explNote.hidden = qual.timeline !== 'exploring';
+      });
+    });
+
+    // Who should we call — switches the form labels (La Herencia pattern)
+    const nameLabel = document.getElementById('lead-name-label');
+    const phoneLabel = document.getElementById('lead-phone-label');
+    const callforNote = document.getElementById('callfor-note');
+    cardEl.querySelectorAll('[data-callfor]').forEach((btn) => {
+      btn.addEventListener('click', function () {
+        cardEl.querySelectorAll('[data-callfor]').forEach((b) => { b.classList.remove('lc-chipbtn--on'); b.setAttribute('aria-pressed', 'false'); });
+        btn.classList.add('lc-chipbtn--on');
+        btn.setAttribute('aria-pressed', 'true');
+        qual.callfor = btn.dataset.callfor;
+        if (qual.callfor === 'family') {
+          nameLabel.textContent = 'Their name';
+          phoneLabel.textContent = 'Their phone number';
+          callforNote.textContent = 'We’ll tell them you asked us to look at the lot.';
+          callforNote.hidden = false;
+        } else if (qual.callfor === 'child') {
+          nameLabel.textContent = 'Your name';
+          phoneLabel.textContent = 'Your phone number';
+          callforNote.textContent = 'Good of you to help. We can talk with you, your parents, or both — in English or Spanish.';
+          callforNote.hidden = false;
+          if (!qual.owner) { qual.owner = 'helping'; qual.ownerInferred = true; }
+        } else {
+          nameLabel.textContent = 'Name';
+          phoneLabel.textContent = 'Phone number';
+          callforNote.hidden = true;
+        }
+        if (qual.callfor !== 'child' && qual.ownerInferred) { qual.owner = ''; qual.ownerInferred = false; }
+      });
+    });
+
+    // Lead form — the callback lead. Failure keeps the form and routes to the phone.
+    const leadForm = document.getElementById('lead-form');
+    const leadFail = document.getElementById('lead-fail');
+    if (leadForm) {
+      leadForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const btn = leadForm.querySelector('button');
+        btn.disabled = true;
+        const owner = qual.owner + (qual.callfor === 'family' ? (qual.owner ? '+' : '') + 'call-family' : '');
+        submitLead({
+          kind: 'callback',
+          name: leadForm.name.value.trim(),
+          phone: leadForm.phone.value.trim(),
+          address: data.matchedAddress || data.inputAddress || '',
+          verdict: data.verdict || '',
+          goal: qual.goal,
+          owner: owner,
+          timeline: qual.timeline,
+          source: LEAD_SOURCE,
+        })
+          .then((res) => {
+            if (res && res.ok) {
+              // Only confirm a callback when the lead was actually captured.
+              leadForm.outerHTML =
+                '<p class="lc-lead-thanks">Got it. A real person will call you back — English or Spanish. ' +
+                'If the honest answer is no, that’s the answer you’ll get. ' +
+                'If it’s easier, call us anytime: 323.566.8096.</p>';
+              if (leadFail) leadFail.hidden = true;
+            } else {
+              // Never pretend it was saved — keep the form, show the phone path.
+              if (leadFail) leadFail.hidden = false;
+              btn.disabled = false;
+              btn.textContent = 'Try Again';
+            }
+          });
+      });
+    }
+  }
+
+  function renderError(message, address) {
+    render({
+      verdict: 'look',
+      inputAddress: address || '',
+      headline: message ||
+        'We couldn’t read this lot automatically — that happens with unusual records, new addresses, or anything outside Los Angeles and Orange Counties. It doesn’t mean you can’t build.',
+      notes: [
+        'An automated check is only the first look. A human look is free too — that’s been the first step here since 1991.',
+      ],
+      nextStep: 'Call us with your address and Margarita’s team will read the lot the way we’ve done it for 35 years — person to person.',
+    });
+  }
+
+  function runCheck(address) {
+    if (checking) return;
+    checking = true;
+    startLoading();
+
+    fetch('/api/check', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ address: address }),
+    })
+      .then(async (r) => {
+        const body = await r.json().catch(() => null);
+        if (!r.ok || !body || body.ok === false) {
+          throw new Error((body && body.message) || '');
+        }
+        return body;
+      })
+      .then((data) => {
+        stopLoading();
+        data.inputAddress = address;
+        render(data);
+      })
+      .catch((err) => {
+        stopLoading();
+        renderError(err && err.message ? err.message : '', address);
+      })
+      .finally(() => {
+        checking = false;
+      });
+  }
+
+  function wireForm(form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const input = form.querySelector('input');
+      const address = input.value.trim();
+      if (!address) return;
+      runCheck(address);
+    });
+  }
+
+  wireForm(document.getElementById('lotcheck-form'));
+  document.querySelectorAll('.lotcheck-form-bottom').forEach(wireForm);
+
+  /* ---------- Handbook: email in, download link out. The whole transaction. ---------- */
+  const handbookForm = document.getElementById('handbook-form');
+  if (handbookForm) {
+    handbookForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const btn = handbookForm.querySelector('button');
+      btn.disabled = true;
+      submitLead({
+        kind: 'handbook',
+        email: handbookForm.email.value.trim(),
+        source: LEAD_SOURCE,
+      })
+        .then((res) => {
+          const note = document.getElementById('handbook-note');
+          if (res && res.ok) {
+            if (note) note.hidden = true;
+            handbookForm.outerHTML =
+              '<p class="lc-lead-thanks lc-lead-thanks--center">Your handbook — ' +
+              '<a href="/downloads/dbp-adu-handbook.pdf" target="_blank" rel="noopener"><strong>download it here</strong></a>. ' +
+              'That was the whole transaction.</p>';
+          } else {
+            if (note) {
+              note.innerHTML = 'That didn’t save just now — call or text <a href="tel:+13235668096"><strong>323.566.8096</strong></a> and we’ll get you the handbook another way.';
+              note.classList.add('lc-lead-fail');
+            }
+            btn.disabled = false;
+            btn.textContent = 'Try Again';
+          }
+        });
+    });
+  }
+
+  /* ---------- Pro lane: contractors & investors ---------- */
+  const proForm = document.getElementById('pro-form');
+  if (proForm) {
+    let volume = '';
+    proForm.querySelectorAll('[data-volume]').forEach((btn) => {
+      btn.addEventListener('click', function () {
+        proForm.querySelectorAll('[data-volume]').forEach((b) => b.classList.remove('lc-chipbtn--on'));
+        btn.classList.add('lc-chipbtn--on');
+        volume = btn.dataset.volume;
+      });
+    });
+    proForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const btn = proForm.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      submitLead({
+        kind: 'pro',
+        name: proForm.name.value.trim(),
+        phone: proForm.phone.value.trim(),
+        company: proForm.company.value.trim(),
+        goal: volume ? volume + ' projects/yr' : '',
+        source: LEAD_SOURCE,
+      })
+        .then((res) => {
+          const note = document.getElementById('pro-note');
+          if (res && res.ok) {
+            if (note) note.hidden = true;
+            proForm.outerHTML =
+              '<p class="lc-lead-thanks">Got it — we’ll call you back to talk projects and pricing. ' +
+              'If it’s faster, the line is 323.566.8096.</p>';
+          } else {
+            if (note) {
+              note.innerHTML = 'We couldn’t save that just now, and we won’t pretend we did. Call <a href="tel:+13235668096"><strong>323.566.8096</strong></a> and say you build — a real person answers.';
+              note.classList.add('lc-lead-fail');
+            }
+            btn.disabled = false;
+            btn.textContent = 'Try Again';
+          }
+        });
+    });
+  }
+})();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+node_modules/
+.wrangler/
+dist/
+.DS_Store
+*.log
+.dev.vars
+.env
+/Lot-Check-Go-Live-Guide.pdf

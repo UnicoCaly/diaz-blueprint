@@ -1,0 +1,214 @@
+/* ==========================================================================
+   Diaz Blueprint Design System  —  @diaz-blueprint/ui
+   SYNCED ARTIFACT. Generated from the design system (src/styles.css).
+   To update: rebuild the DS (`npm run build` in ../dbp-design-system) and
+   copy its dist/styles.css over this file. Do not hand-edit — page-specific
+   styles live in styles.css, which loads after this file.
+   Brand: Process Blue #0072CE · Dark #1A1A2E · Warm #F9F6F1 · White
+   Type: Poppins (headlines, loaded via the page <link>) · Helvetica (body)
+   ========================================================================== */
+
+:root {
+  --dbp-blue: #0072CE;
+  --dbp-blue-dark: #005DA6;
+  --dbp-dark: #1A1A2E;
+  --dbp-warm: #F9F6F1;
+  --dbp-white: #FFFFFF;
+  --dbp-gray-500: #6B7280;
+  --dbp-gray-700: #374151;
+  --dbp-gray-200: #E5E7EB;
+  --dbp-green: #16A34A;
+  --dbp-amber: #B45309;
+  --dbp-radius: 12px;
+  --dbp-radius-sm: 10px;
+  --dbp-font-head: 'Poppins', 'Helvetica Neue', Helvetica, sans-serif;
+  --dbp-font-body: Helvetica, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* ---------- Button ---------- */
+.dbp-btn {
+  font-family: var(--dbp-font-head);
+  font-weight: 700;
+  font-size: 16px;
+  border: none;
+  border-radius: var(--dbp-radius);
+  padding: 15px 26px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  line-height: 1;
+}
+.dbp-btn--primary { background: var(--dbp-blue); color: var(--dbp-white); }
+.dbp-btn--primary:hover { background: var(--dbp-blue-dark); }
+.dbp-btn--dark { background: var(--dbp-dark); color: var(--dbp-white); font-weight: 600; }
+.dbp-btn--dark:hover { background: #2a2a44; }
+.dbp-btn--outline { background: transparent; color: var(--dbp-blue); border: 2px solid var(--dbp-blue); }
+.dbp-btn--outline:hover { background: rgba(0, 114, 206, 0.07); }
+.dbp-btn--sm { font-size: 14.5px; padding: 11px 20px; border-radius: var(--dbp-radius-sm); }
+.dbp-btn:disabled { background: var(--dbp-gray-500); cursor: wait; }
+
+/* ---------- PhoneButton ---------- */
+.dbp-phone {
+  font-family: var(--dbp-font-head);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--dbp-white);
+  background: var(--dbp-blue);
+  padding: 8px 16px;
+  border-radius: var(--dbp-radius-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+.dbp-phone:hover { background: var(--dbp-blue-dark); }
+
+/* ---------- Input ---------- */
+.dbp-input {
+  font-family: var(--dbp-font-body);
+  font-size: 16px;
+  padding: 15px 16px;
+  border: 2px solid var(--dbp-gray-200);
+  border-radius: var(--dbp-radius);
+  color: var(--dbp-dark);
+  background: var(--dbp-white);
+  width: 100%;
+}
+.dbp-input:focus {
+  outline: none;
+  border-color: var(--dbp-blue);
+  box-shadow: 0 0 0 3px rgba(0, 114, 206, 0.15);
+}
+
+/* ---------- Header ---------- */
+.dbp-header {
+  background: var(--dbp-dark);
+  color: var(--dbp-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 12px 20px;
+}
+.dbp-header__brand { display: flex; align-items: center; gap: 10px; }
+.dbp-header__brand-name { font-family: var(--dbp-font-head); font-weight: 700; font-size: 15px; }
+.dbp-header__est { font-size: 12px; color: rgba(255, 255, 255, 0.55); }
+.dbp-header__contact { display: flex; align-items: center; gap: 14px; }
+.dbp-header__espanol { font-size: 12px; color: rgba(255, 255, 255, 0.65); }
+
+/* ---------- Logo ---------- */
+.dbp-logo { display: block; height: auto; max-width: 100%; }
+.dbp-logo--header { height: 28px; width: auto; }
+.dbp-logo--footer { height: 32px; width: auto; margin: 0 auto 14px; }
+
+/* ---------- Footer ---------- */
+.dbp-footer {
+  background: var(--dbp-dark);
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  padding: 32px 20px 40px;
+  font-size: 13.5px;
+}
+.dbp-footer a { color: rgba(255, 255, 255, 0.85); text-decoration: none; }
+.dbp-footer__taglines { margin-top: 8px; color: rgba(255, 255, 255, 0.45); font-style: italic; }
+.dbp-footer__legal { margin: 18px auto 0; max-width: 680px; font-size: 11.5px; line-height: 1.6; color: rgba(255, 255, 255, 0.38); }
+
+/* ---------- Section ---------- */
+.dbp-section { padding: 56px 20px; background: var(--dbp-white); color: var(--dbp-dark); }
+.dbp-section--warm { background: var(--dbp-warm); }
+.dbp-section--dark { background: var(--dbp-dark); color: rgba(255, 255, 255, 0.88); }
+.dbp-section--cta { text-align: center; }
+.dbp-section__inner { max-width: 1040px; margin: 0 auto; }
+.dbp-section__inner--narrow { max-width: 720px; }
+.dbp-section h2 { font-family: var(--dbp-font-head); font-size: clamp(24px, 3.5vw, 32px); font-weight: 800; margin-bottom: 14px; line-height: 1.25; }
+.dbp-section--dark h2 { color: var(--dbp-white); }
+.dbp-section__lede { font-size: 16.5px; color: var(--dbp-gray-700); max-width: 760px; margin-bottom: 26px; }
+.dbp-section--dark .dbp-section__lede { color: rgba(255, 255, 255, 0.75); }
+.dbp-section--cta .dbp-section__lede { margin-left: auto; margin-right: auto; }
+
+/* ---------- Hero ---------- */
+.dbp-hero {
+  padding: 56px 20px 40px;
+  background-color: var(--dbp-white);
+  background-image:
+    linear-gradient(rgba(0, 114, 206, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 114, 206, 0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.dbp-hero__inner { max-width: 1040px; margin: 0 auto; }
+.dbp-hero h1 { font-family: var(--dbp-font-head); font-size: clamp(34px, 5vw, 52px); font-weight: 800; color: var(--dbp-dark); margin-bottom: 16px; line-height: 1.15; }
+.dbp-hero__sub { font-size: 19px; color: var(--dbp-gray-700); margin-bottom: 10px; }
+.dbp-hero__espanol { font-style: italic; color: var(--dbp-blue); font-size: 15px; margin-bottom: 26px; }
+
+/* ---------- Card ---------- */
+.dbp-card { background: var(--dbp-white); border-radius: var(--dbp-radius); padding: 22px; border: 1px solid var(--dbp-gray-200); }
+.dbp-card--warm { background: var(--dbp-warm); border: none; }
+
+/* ---------- FeatureCard (reason) ---------- */
+.dbp-feature { background: var(--dbp-white); border-radius: var(--dbp-radius); padding: 22px; border: 1px solid var(--dbp-gray-200); }
+.dbp-feature__title { font-family: var(--dbp-font-head); font-size: 17px; font-weight: 700; color: var(--dbp-blue); margin-bottom: 8px; }
+.dbp-feature__body { font-size: 14.5px; color: var(--dbp-gray-700); }
+
+/* ---------- Verdict / ResultCard ---------- */
+.dbp-result { border: 2px solid var(--dbp-gray-200); border-radius: var(--dbp-radius); overflow: hidden; background: var(--dbp-white); }
+.dbp-verdict { padding: 28px; color: var(--dbp-white); }
+.dbp-verdict--yes { background: var(--dbp-green); }
+.dbp-verdict--conditions { background: var(--dbp-amber); }
+.dbp-verdict--look { background: var(--dbp-blue-dark); }
+.dbp-verdict__label { font-family: var(--dbp-font-head); font-size: 11px; font-weight: 700; letter-spacing: 3px; opacity: 0.85; margin-bottom: 6px; text-transform: uppercase; }
+.dbp-verdict__title { font-family: var(--dbp-font-head); font-size: clamp(24px, 4vw, 34px); font-weight: 800; }
+.dbp-verdict__sub { margin-top: 8px; font-size: 14px; opacity: 0.9; }
+.dbp-result__body { padding: 26px 28px; }
+
+/* ---------- Chip ---------- */
+.dbp-chip { border: 1.5px solid var(--dbp-gray-200); border-radius: var(--dbp-radius-sm); padding: 12px 14px; font-size: 13.5px; display: block; }
+.dbp-chip--eligible { border-color: rgba(22, 163, 74, 0.45); background: rgba(22, 163, 74, 0.06); }
+.dbp-chip--maybe { border-color: rgba(180, 83, 9, 0.4); background: rgba(180, 83, 9, 0.05); }
+.dbp-chip__name { font-family: var(--dbp-font-head); font-weight: 600; display: block; color: var(--dbp-dark); }
+.dbp-chip__note { color: var(--dbp-gray-500); font-size: 12.5px; }
+
+/* ---------- Stat / Fact ---------- */
+.dbp-stat { display: inline-block; }
+.dbp-stat__num { font-family: var(--dbp-font-head); font-weight: 800; font-size: 22px; color: var(--dbp-dark); display: block; }
+.dbp-stat__label { font-size: 12.5px; color: var(--dbp-gray-500); }
+
+/* ---------- BulletList (blue-dot) ---------- */
+.dbp-bullets { list-style: none; margin: 0; padding: 0; }
+.dbp-bullets li { padding: 7px 0 7px 22px; position: relative; font-size: 15px; color: var(--dbp-gray-700); }
+.dbp-bullets li::before { content: ""; position: absolute; left: 0; top: 14px; width: 8px; height: 8px; border-radius: 50%; background: var(--dbp-blue); }
+.dbp-section--dark .dbp-bullets li { color: rgba(255, 255, 255, 0.78); }
+.dbp-section--dark .dbp-bullets li strong { color: var(--dbp-white); }
+
+/* ---------- ProofStrip ---------- */
+.dbp-proof { padding-top: 16px; border-top: 1px solid var(--dbp-gray-200); font-size: 13px; color: var(--dbp-gray-500); font-style: italic; }
+
+/* ---------- Steps (numbered) ---------- */
+.dbp-steps { list-style: none; counter-reset: dbpstep; margin: 0; padding: 0; max-width: 720px; }
+.dbp-steps li { counter-increment: dbpstep; position: relative; padding: 12px 0 12px 56px; font-size: 16px; color: var(--dbp-gray-700); min-height: 48px; }
+.dbp-steps li::before {
+  content: counter(dbpstep);
+  position: absolute; left: 0; top: 8px;
+  width: 38px; height: 38px; border-radius: var(--dbp-radius-sm);
+  background: var(--dbp-blue); color: var(--dbp-white);
+  font-family: var(--dbp-font-head); font-weight: 700; font-size: 17px;
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* ---------- OutcomeCard (top-border by verdict) ---------- */
+.dbp-outcome { background: var(--dbp-white); border-radius: var(--dbp-radius); padding: 22px; border-top: 4px solid var(--dbp-gray-200); }
+.dbp-outcome--yes { border-top-color: var(--dbp-green); }
+.dbp-outcome--conditions { border-top-color: var(--dbp-amber); }
+.dbp-outcome--look { border-top-color: var(--dbp-blue); }
+.dbp-outcome__title { font-family: var(--dbp-font-head); font-size: 17px; margin-bottom: 8px; }
+.dbp-outcome__body { font-size: 14.5px; color: var(--dbp-gray-700); }
+
+/* ---------- Tagline ---------- */
+.dbp-tagline { font-family: var(--dbp-font-head); font-style: italic; color: var(--dbp-blue); font-size: 15px; }
+
+/* ---------- Grid helper ---------- */
+.dbp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }

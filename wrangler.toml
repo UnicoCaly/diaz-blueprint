@@ -1,0 +1,24 @@
+name = "dbp-lotcheck"
+compatibility_date = "2026-05-01"
+pages_build_output_dir = "public"
+
+# --- Lead capture: set up AT LEAST ONE of the two below before launch ---
+#
+# A) D1 storage (the durable record)
+#    1) Create the database:  npx wrangler d1 create dbp-lotcheck-leads
+#    2) Paste the printed binding below, then create the table:
+#       npx wrangler d1 execute dbp-lotcheck-leads --remote --file=./schema.sql
+#
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "dbp-lotcheck-leads"
+# database_id = "<paste-id-here>"
+#
+# B) Real-time alert (what actually pages a human the moment a lead comes in)
+#    Set LEAD_WEBHOOK_URL as a secret — a Slack / Zapier / Make / Discord incoming
+#    webhook. (Zapier can fan it out to SMS or email.) It is a secret, not a [vars]
+#    entry, so it isn't committed:
+#       npx wrangler pages secret put LEAD_WEBHOOK_URL
+#
+# With both set, every lead is stored AND alerted. With neither, the result card
+# honestly tells the visitor to call instead of claiming they're queued.

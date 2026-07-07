@@ -1,0 +1,12 @@
+{
+  "name": "dbp-lotcheck",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Free ADU feasibility checker for Diaz Blueprint & Drafting Services.",
+  "scripts": {
+    "test": "node --test",
+    "dev": "wrangler pages dev",
+    "deploy": "wrangler pages deploy"
+  }
+}

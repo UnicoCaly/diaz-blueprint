@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lot Check — a free, honest ADU answer for your lot | Diaz Blueprint &amp; Drafting Services</title>
+  <meta name="description" content="Free ADU feasibility check for Los Angeles & Orange County. Enter your address and learn in about two minutes what your lot likely allows — size, type, and ballpark cost. If it doesn't work, we'll tell you that too. 35 years of experience. Hablamos Español. 323.566.8096" />
+  <meta property="og:title" content="Lot Check — the casita projects that fail usually fail at the lot" />
+  <meta property="og:description" content="Free ADU feasibility check for LA & Orange County. Enter your address, get an honest answer in about two minutes. Diaz Blueprint — 35 years, the City of South Gate's top ADU referral." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Design system first, then the page layer (base reset + layout). -->
+  <link rel="stylesheet" href="/ds.css" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+
+  <!-- ============ HEADER (DS: Header) ============ -->
+  <header class="dbp-header">
+    <div class="dbp-header__brand">
+      <a class="dbp-logo-link" href="https://diazblueprint.com" aria-label="Diaz Blueprint &amp; Drafting Services — diazblueprint.com">
+        <img class="dbp-logo dbp-logo--header" src="/assets/dbp-logo-white.png" width="160" height="40" alt="Diaz Blueprint &amp; Drafting Services" />
+      </a>
+      <span class="dbp-header__est">Est. 1991</span>
+    </div>
+    <div class="dbp-header__contact">
+      <a class="lc-pro-link" href="#pro-lane">Contractors &amp; investors</a>
+      <a class="dbp-phone" href="tel:+13235668096">323.566.8096</a>
+      <span class="dbp-header__espanol">Hablamos Español</span>
+    </div>
+  </header>
+  <p id="sr-status" class="visually-hidden" role="status"></p>
+
+  <!-- ============ HERO (DS: Hero) ============ -->
+  <section class="dbp-hero" id="top">
+    <div class="dbp-hero__inner">
+      <div class="lc-hero-grid">
+        <div class="lc-hero-copy">
+          <h1>The casita projects that fail usually fail at&nbsp;the&nbsp;lot.</h1>
+          <p class="dbp-hero__sub">Before the plans, before the permits, before a dollar is spent — setbacks, space, and the county records decide it. Enter your address and check all three, free, in about two minutes. If your lot doesn't work, we'll tell you that too.</p>
+          <p class="dbp-hero__espanol" lang="es">Si su lote no funciona, se lo decimos. La respuesta es gratis. Hablamos&nbsp;Español.</p>
+
+          <form id="lotcheck-form" class="lc-form">
+            <div class="lc-labeled">
+              <label for="address-input">Your property address</label>
+              <input
+                id="address-input"
+                name="address"
+                class="dbp-input"
+                type="text"
+                inputmode="text"
+                autocomplete="street-address"
+                placeholder="e.g. 4321 Tweedy Blvd, South Gate"
+                required
+                aria-describedby="form-microcopy"
+              />
+            </div>
+            <button type="submit" id="check-btn" class="dbp-btn dbp-btn--primary">Check My Lot — Free</button>
+          </form>
+
+          <div class="lc-goalrow" role="group" aria-label="Who would the casita be for?">
+            <p class="lc-goalrow__label">Who would the casita be for? <span class="lc-goalrow__hint">Optional — one tap. It points your results at the right next step.</span></p>
+            <div class="lc-goalrow__chips">
+              <button type="button" class="lc-chipbtn" aria-pressed="false" data-goal="family" data-plan-label="CASITA DE MAMÁ">For mom — <span lang="es">los abuelos</span></button>
+              <button type="button" class="lc-chipbtn" aria-pressed="false" data-goal="kids" data-plan-label="THE KIDS' CASITA">For my grown kids</button>
+              <button type="button" class="lc-chipbtn" aria-pressed="false" data-goal="rental" data-plan-label="RENTAL CASITA">For a renter — help with the mortgage</button>
+              <button type="button" class="lc-chipbtn" aria-pressed="false" data-goal="office" data-plan-label="STUDIO · OFFICE">For a home office or studio</button>
+              <button type="button" class="lc-chipbtn" aria-pressed="false" data-goal="legacy" data-plan-label="PARA LA FAMILIA">For the next generation</button>
+            </div>
+          </div>
+
+          <p class="lc-microcopy" id="form-microcopy">
+            Free. Just the address — no name, no email needed to see your result. We don't sell your information — we haven't needed to advertise in over 15 years, and we're not starting with you.
+          </p>
+          <p class="lc-hero-call">Prefer to start with a person? Call us: <a href="tel:+13235668096"><strong>323.566.8096</strong></a>. A real person answers, in English or Spanish.</p>
+        </div>
+
+        <div class="lc-hero-plan" aria-hidden="true">
+          <!-- Blueprint-style line drawing: a lot where a dashed casita outline crosses the setback line — the hook, drawn as a plan. Tapping a goal chip relabels the casita. -->
+          <svg viewBox="0 0 360 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Site plan sketch of a backyard casita against the setback line">
+            <rect x="14" y="14" width="332" height="272" fill="none" stroke="#0072CE" stroke-width="1.5" />
+            <!-- setback line (dashed, inside the property line) -->
+            <rect x="34" y="34" width="292" height="232" fill="none" stroke="#0072CE" stroke-opacity=".35" stroke-width="1" stroke-dasharray="4 4" />
+            <text x="42" y="30" class="plan-dim">4'-0" SETBACK</text>
+            <!-- main house -->
+            <rect x="50" y="150" width="150" height="110" fill="none" stroke="#1A1A2E" stroke-width="1.5" />
+            <text x="125" y="210" text-anchor="middle" class="plan-label">EXISTING HOME</text>
+            <!-- the casita that fits (solid) -->
+            <rect x="232" y="52" width="86" height="66" fill="rgba(0,114,206,.07)" stroke="#0072CE" stroke-width="2" />
+            <text id="plan-casita-label" x="275" y="88" text-anchor="middle" class="plan-label plan-label-blue">CASITA</text>
+            <!-- the casita that doesn't (dashed, crossing the rear setback line) -->
+            <rect x="248" y="236" width="64" height="44" fill="none" stroke="#D97706" stroke-width="1.5" stroke-dasharray="5 4" />
+            <text x="280" y="230" text-anchor="middle" class="plan-dim plan-dim--warn">TOO CLOSE</text>
+            <!-- setback arrows -->
+            <line x1="318" y1="34" x2="318" y2="52" stroke="#0072CE" stroke-width="1" />
+            <text x="331" y="47" text-anchor="middle" class="plan-dim">4'</text>
+            <!-- walkway -->
+            <line x1="200" y1="170" x2="232" y2="118" stroke="#1A1A2E" stroke-opacity=".4" stroke-width="1" stroke-dasharray="3 4" />
+            <!-- north arrow -->
+            <circle cx="44" cy="58" r="14" fill="none" stroke="#1A1A2E" stroke-opacity=".5" stroke-width="1" />
+            <path d="M44 48 L48 62 L44 58 L40 62 Z" fill="#1A1A2E" fill-opacity=".55" />
+            <text x="44" y="86" text-anchor="middle" class="plan-dim">N</text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- The deal, plainly (DS: Card--warm) -->
+      <div class="dbp-card dbp-card--warm lc-includes">
+        <h2 class="lc-includes__title">The deal, plainly</h2>
+        <div class="lc-deal">
+          <ul class="dbp-bullets">
+            <li><strong>You get:</strong> whether an ADU — the legal name for a casita — is likely buildable on your lot: detached, attached, garage conversion, or JADU (a junior unit inside your existing house)</li>
+            <li><strong>You get:</strong> the size your lot likely supports — setbacks and lot coverage in plain English — plus a ballpark cost for that kind of build, and your exact next step</li>
+          </ul>
+          <ul class="dbp-bullets">
+            <li><strong>You don't get:</strong> a guarantee. Your city has the final word at plan check, and anyone who promises otherwise is selling something</li>
+            <li><strong>You don't get:</strong> pressure. If the answer is no, you'll hear it plainly — and it costs you nothing</li>
+          </ul>
+        </div>
+        <p class="dbp-proof">35 years of experience · The City of South Gate's top referral for ADU plans · No advertising in 15+ years — every client referred</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RESULTS (hidden until a check runs) ============ -->
+  <section class="lc-results" id="results" hidden>
+    <div class="lc-results__inner">
+      <div id="results-loading" class="lc-loading" hidden>
+        <div class="lc-loading__rule"></div>
+        <p class="lc-loading__text">Reading your lot&hellip;</p>
+        <p class="lc-loading__sub" id="loading-step">Finding your parcel</p>
+        <div id="loading-q" class="lc-loading-q" hidden>
+          <p class="lc-loading-q__label" id="loading-q-label">While it reads your lot — the property is&hellip;</p>
+          <div class="lc-goalrow__chips lc-goalrow__chips--center" role="group" aria-labelledby="loading-q-label">
+            <button type="button" class="lc-chipbtn" aria-pressed="false" data-owner="own">I own this home</button>
+            <button type="button" class="lc-chipbtn" aria-pressed="false" data-owner="helping">I'm helping a family member</button>
+            <button type="button" class="lc-chipbtn" aria-pressed="false" data-owner="looking">I'm looking to buy</button>
+          </div>
+          <button type="button" class="lc-skip" id="owner-skip">skip</button>
+        </div>
+      </div>
+      <div id="results-card" hidden><!-- populated by app.js --></div>
+    </div>
+  </section>
+
+  <!-- ============ THE THREE KILLERS (DS: Section--warm + FeatureCard grid) ============ -->
+  <section class="dbp-section dbp-section--warm">
+    <div class="dbp-section__inner">
+      <h2>Three things end casita plans early</h2>
+      <p class="dbp-section__lede">A backyard home is a six-figure decision. For 35 years we've watched projects end at the same three places — usually after money was already spent. Check them in this order.</p>
+      <div class="dbp-grid">
+        <div class="dbp-feature">
+          <h3 class="dbp-feature__title">1 · Setbacks</h3>
+          <div class="dbp-feature__body">The required distance between a new build and your property lines — California's baseline is 4 feet at the side and rear for a new detached ADU. The yard you see and the yard you can build in are different shapes. Plenty of projects get sketched, priced, and promised before anyone measures.
+            <details class="lc-more"><summary>Worth knowing</summary><p>Converting an existing garage usually doesn't trigger new setbacks — you're staying inside a footprint that already exists.</p></details>
+          </div>
+        </div>
+        <div class="dbp-feature">
+          <h3 class="dbp-feature__title">2 · Space</h3>
+          <div class="dbp-feature__body">Your city must allow an ADU of at least 800 square feet, and no city may turn you away for having a small lot — that's state law. But what fits on your lot depends on what's already on it. Some yards hold a two-bedroom. Some hold a studio. Some hold nothing new — and it's better to know before you borrow.
+            <details class="lc-more"><summary>Worth knowing</summary><p>A JADU — up to 500 square feet inside your existing home — needs no yard at all. When the yard says no, it's often the door still open.</p></details>
+          </div>
+        </div>
+        <div class="dbp-feature">
+          <h3 class="dbp-feature__title">3 · The records</h3>
+          <div class="dbp-feature__body">What the county has on paper — lot size, land use, how the parcel is recorded — doesn't always match what you see from the sidewalk. Unusual records don't always mean no. But they stop more projects than any neighbor's opinion, because nobody checks until the city does.
+            <details class="lc-more"><summary>Worth knowing</summary><p>Once your city accepts a complete ADU application, state law puts the review on a 60-day clock.</p></details>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THE REASONS RARELY CHANGE (DS: Section + FeatureCard grid) ============ -->
+  <section class="dbp-section">
+    <div class="dbp-section__inner">
+      <h2>The reasons rarely change</h2>
+      <p class="dbp-section__lede">Margarita has drawn plans for the same streets since 1991, and the story that walks in the door rarely changes. Mom is getting older, and the drive across town keeps getting longer. A grown kid is priced out of the neighborhood they grew up in. The house that raised everyone is one bedroom short. For a lot of families, the answer has been sitting in the backyard the whole time.</p>
+      <div class="dbp-grid lc-grid-4">
+        <div class="dbp-feature">
+          <h3 class="dbp-feature__title">A place for mom.</h3>
+          <div class="dbp-feature__body">La suegra, los abuelos — a small home of their own, steps from your kitchen door. Close enough for Sunday dinner, separate enough for everyone's peace.</div>
+        </div>
+        <div class="dbp-feature">
+          <h3 class="dbp-feature__title">Kids who can stay close.</h3>
+          <div class="dbp-feature__body">A casita lets your grown kids stay in the community they grew up in — close to family, close to work, close to Sunday dinner.</div>
+        </div>
+        <div class="dbp-feature">
+          <h3 class="dbp-feature__title">Rent that helps with the mortgage.</h3>
+          <div class="dbp-feature__body">A permitted casita can bring in steady rent — help with the payment now, a cushion later. Some families rent it out first and keep it ready for the day mom needs it.</div>
+        </div>
+        <div class="dbp-feature">
+          <h3 class="dbp-feature__title">Something to hand down.</h3>
+          <div class="dbp-feature__body">A permitted casita hands your kids options — a home for family, or steady income — and clean paperwork instead of a headache.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THE TOOL + THE FOUR TYPES (DS: Section--warm + Steps) ============ -->
+  <section class="dbp-section dbp-section--warm">
+    <div class="dbp-section__inner">
+      <h2>The Lot Check reads all three. Free.</h2>
+      <p class="dbp-section__lede">
+        Until now, the first answer meant paying a professional for a feasibility opinion, or decoding zoning documents that read
+        like legal filings. We think the first answer should be free — so we built the Lot Check to give it away.
+      </p>
+      <ol class="dbp-steps">
+        <li><strong>Enter your address.</strong> That's all it needs — no email, no account, no callback you didn't ask for.</li>
+        <li><strong>It reads your lot against California's ADU rules</strong> — setbacks, space, and the county records — and answers in plain English, in about two minutes.</li>
+        <li><strong>You decide what's next.</strong> It's your home. No pressure either way.</li>
+      </ol>
+
+      <h3 class="lc-types-title">Four ways a casita happens</h3>
+      <div class="lc-types">
+        <details class="lc-type">
+          <summary><svg viewBox="0 0 48 36" aria-hidden="true"><rect x="4" y="4" width="22" height="28" fill="none" stroke="#1A1A2E" stroke-width="1.5"/><rect x="32" y="8" width="12" height="12" fill="rgba(0,114,206,.1)" stroke="#0072CE" stroke-width="1.5"/></svg>Detached</summary>
+          <p>Its own four walls in the yard. Needs the most room — 4-foot side and rear setbacks.</p>
+        </details>
+        <details class="lc-type">
+          <summary><svg viewBox="0 0 48 36" aria-hidden="true"><rect x="6" y="6" width="24" height="24" fill="none" stroke="#1A1A2E" stroke-width="1.5"/><rect x="30" y="12" width="12" height="18" fill="rgba(0,114,206,.1)" stroke="#0072CE" stroke-width="1.5"/></svg>Attached</summary>
+          <p>Shares a wall with your house. A fit when the yard is tight on one side.</p>
+        </details>
+        <details class="lc-type">
+          <summary><svg viewBox="0 0 48 36" aria-hidden="true"><rect x="6" y="6" width="22" height="24" fill="none" stroke="#1A1A2E" stroke-width="1.5"/><rect x="32" y="14" width="12" height="16" fill="rgba(0,114,206,.1)" stroke="#0072CE" stroke-width="1.5" stroke-dasharray="3 2"/></svg>Garage conversion</summary>
+          <p>Uses the footprint you already have — usually no new setbacks to fight.</p>
+        </details>
+        <details class="lc-type">
+          <summary><svg viewBox="0 0 48 36" aria-hidden="true"><rect x="8" y="6" width="32" height="24" fill="none" stroke="#1A1A2E" stroke-width="1.5"/><rect x="26" y="14" width="12" height="16" fill="rgba(0,114,206,.1)" stroke="#0072CE" stroke-width="1.5"/></svg>JADU</summary>
+          <p>Up to 500 square feet inside the existing house. The smallest yes, and sometimes the only one.</p>
+        </details>
+      </div>
+      <p class="lc-fine-note">The check tells you which of these your lot likely supports — <em>"likely" is deliberate; your city has the final say.</em></p>
+    </div>
+  </section>
+
+  <!-- ============ WHAT WE TELL YOU WHEN THE ANSWER IS NO (DS: Section + OutcomeCard grid) ============ -->
+  <section class="dbp-section">
+    <div class="dbp-section__inner">
+      <h2>What we tell you when the answer is no</h2>
+      <p class="dbp-section__lede">The Lot Check gives one of three verdicts. None of them is a guarantee — and one of them is us telling you to slow down. Here's what each means, plainly.</p>
+      <div class="dbp-grid">
+        <div class="dbp-outcome dbp-outcome--yes">
+          <h3 class="dbp-outcome__title">"Likely Buildable."</h3>
+          <div class="dbp-outcome__body">Your lot looks workable under state ADU rules. "Likely" stays in the sentence because your city has the final say at plan check. The next step is permit-ready plans — and you'll know the price before you commit to anything.</div>
+        </div>
+        <div class="dbp-outcome dbp-outcome--conditions">
+          <h3 class="dbp-outcome__title">"Likely Buildable — with conditions."</h3>
+          <div class="dbp-outcome__body">Your lot works, just not the way you pictured. A garage conversion instead of a detached unit. A studio instead of a two-bedroom. The lots other designers walk away from usually get referred to us — this verdict is our home turf, and we stay with it until it's approved.</div>
+        </div>
+        <div class="dbp-outcome dbp-outcome--look">
+          <h3 class="dbp-outcome__title">"Needs a Closer Look."</h3>
+          <div class="dbp-outcome__body">The records couldn't give a straight answer — unusual parcels, mixed use, missing data. The automated check stops there on purpose. A person takes over: Margarita's team reads it free, the way we've read lots since 1991.</div>
+        </div>
+      </div>
+      <p class="lc-no-paragraph">And when a lot truly doesn't work? We say so. A plain no, the reason for it, and whatever path is honestly still open — a JADU, a room addition, or nothing at all. No "let's explore your options" meeting. No plan set you don't need. An honest no costs you nothing; a polite maybe costs families thousands. <em class="lc-espanol-inline" lang="es">Si no se puede, se lo decimos — y no le cuesta nada.</em></p>
+      <p class="lc-fine-note"><em>The Lot Check is a feasibility check, not a permit. It's the same first look we've given lots since 1991 — the look that tells you whether it's worth going further.</em></p>
+    </div>
+  </section>
+
+  <!-- ============ WHY FREE + REAL PRICES (DS: Section--warm narrow) ============ -->
+  <section class="dbp-section dbp-section--warm">
+    <div class="dbp-section__inner dbp-section__inner--narrow">
+      <h2>Why it's free — and what the rest costs</h2>
+      <p>
+        Honest answer: if your lot works and you decide to build, we'd like to be the ones who draw your plans.
+        That's the whole business. No pressure, no fine print. The check costs you nothing either way.
+      </p>
+      <p>
+        And while we're being plain about money: permit-ready plan sets start at $4,800, priced by your project.
+        A full ADU set typically runs $9,000–$14,000 — about $12 to $16 per square foot. The plans are the small number.
+        The build is the big one. That's exactly why you check the lot before you spend either.
+      </p>
+      <div class="lc-facts lc-facts--center">
+        <span class="dbp-stat"><span class="dbp-stat__num">from $4,800</span><span class="dbp-stat__label">permit-ready plan sets, priced by project</span></span>
+        <span class="dbp-stat"><span class="dbp-stat__num">$9–14K</span><span class="dbp-stat__label">typical full ADU set (~$12–16 per sq ft)</span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRUST (DS: Section--dark + BulletList) ============ -->
+  <section class="dbp-section dbp-section--dark">
+    <div class="dbp-section__inner">
+      <h2>Your neighbor's recommendation</h2>
+      <p class="dbp-section__lede">
+        Diaz Blueprint &amp; Drafting Services was founded in 1991 by J. Margarita Diaz, our architect-educated principal designer,
+        and Carlos A. Diaz Sr. Same family, same phone number.
+      </p>
+      <ul class="dbp-bullets">
+        <li><strong>The City of South Gate's top referral for ADU plans.</strong> When the people who review plans for a living point homeowners somewhere, they point here.</li>
+        <li><strong>No advertising in over 15 years.</strong> Every client arrived referred — by a neighbor, a cousin, a contractor, or the city counter. A referral business only survives if people were told the truth.</li>
+        <li><strong>5.0 stars on Google, 8 reviews.</strong> "Professional, on time and honest… 5+ projects." <span lang="es">"Seriedad y honradez profesional."</span> Two different reviews, one word in common.</li>
+        <li><strong>Hablamos Español.</strong> The actual people drawing your plans — not a translated brochure.</li>
+      </ul>
+      <p>"Get your project to the finish line," another review says. That's the job: plans that pass, and the truth on the way there.</p>
+      <p class="lc-trust-espanol" lang="es">Aquí estamos desde 1991, ayudando a familias como la suya a construir para los suyos. Llámenos: <a href="tel:+13235668096"><strong>323.566.8096</strong></a>.</p>
+    </div>
+  </section>
+
+  <!-- ============ FAQ (DS: Section + native accordion) ============ -->
+  <section class="dbp-section">
+    <div class="dbp-section__inner dbp-section__inner--narrow">
+      <h2>The questions families actually ask</h2>
+      <p class="dbp-section__lede">Asked across our counter for 35 years. Answered the same way here.</p>
+      <div class="lc-faq">
+        <details><summary>What do plans cost?</summary><p>Permit-ready plan sets start at $4,800, priced by your project. Full ADU sets typically run $9–14K — about $12 to $16 per square foot. The honest framing: the plans are the small number. The build is the big number. The Lot Check exists so you know whether to spend either.</p></details>
+        <details><summary>What does the whole casita cost to build?</summary><p>It depends on size, type, and your lot — which is why we don't print one number here. The Lot Check gives a ballpark range for the type your lot likely supports. Real ranges, not wishes.</p></details>
+        <details><summary>Will it rent for enough to cover the payment?</summary><p>We don't promise rent figures — nobody honest can. What we can say: a permitted casita is the kind that can be rented legally, insured, and counted when you sell. Numbers that big deserve a lender's math, not a landing page's.</p></details>
+        <details><summary>Do I need an architect?</summary><p>For most casitas, what you need is a permit-ready plan set your city will approve. That's drafting — our trade since 1991. Margarita, our principal designer, is architect-educated, and some projects do call for added engineering. When yours does, we'll say so plainly.</p></details>
+        <details><summary>How long does it all take?</summary><p>We don't guarantee timelines — cities differ, and we won't pretend otherwise. What state law does set: a 60-day review clock once your application is complete. Our job is making sure it goes in complete.</p></details>
+        <details><summary>What if the check says my lot needs a closer look?</summary><p>Some lots can't be read automatically — unusual records, mixed use, missing data. That's not a no. Call us and Margarita's team will read it in person, the way we have since 1991. And if the answer is no, we'll say that too.</p></details>
+        <details lang="es"><summary>¿Hablan español de verdad?</summary><p>Sí. Las personas que dibujan sus planos lo hablan — no es un folleto traducido. Llámenos y verá: 323.566.8096.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HANDBOOK (DS: Section--warm narrow, email capture) ============ -->
+  <section class="dbp-section dbp-section--warm">
+    <div class="dbp-section__inner dbp-section__inner--narrow">
+      <h2>Not ready to type your address? Fair.</h2>
+      <p>
+        Some people want to read first. The <strong>Owner-Managed ADU &amp; JADU Handbook</strong> covers what to check, what
+        things cost, and how the process runs — written plainly, in the same voice as this page. It's free for an email,
+        and the download opens right here — no inbox hoops.
+      </p>
+      <form id="handbook-form" class="lc-form lc-form--center">
+        <div class="lc-labeled">
+          <label for="handbook-email">Your email</label>
+          <input id="handbook-email" class="dbp-input" type="email" name="email" autocomplete="email" placeholder="e.g. maria@gmail.com" required />
+        </div>
+        <button type="submit" class="dbp-btn dbp-btn--primary">Send Me the Handbook — Free</button>
+      </form>
+      <p class="lc-microcopy lc-microcopy--center" id="handbook-note" aria-live="polite">The handbook is the whole transaction. No newsletter you didn't ask for.</p>
+    </div>
+  </section>
+
+  <!-- ============ PRO LANE (DS: Section--dark) ============ -->
+  <section class="dbp-section dbp-section--dark" id="pro-lane">
+    <div class="dbp-section__inner">
+      <p class="lc-kicker">The pro lane — contractors &amp; investors</p>
+      <h2>Built to pass.</h2>
+      <p class="dbp-section__lede">
+        We're a drafting firm — that's the whole business. For 35 years we've drawn residential plans across Southeast LA,
+        and the pitch to people who build for a living is short: clean sets, straight pricing, and plan-check experience
+        across Southeast LA and beyond.
+      </p>
+      <div class="dbp-grid">
+        <div class="dbp-feature dbp-feature--dark">
+          <h3 class="dbp-feature__title">The 60-day clock starts when the set is complete.</h3>
+          <div class="dbp-feature__body">State law gives a city 60 days to review a complete ADU application. Incomplete sets don't get slow reviews — they get sent back, and the clock restarts. We've submitted plans across Southeast LA since 1991; we know what these counters ask for. And when a set draws corrections anyway, we stay with it until it's approved.</div>
+        </div>
+        <div class="dbp-feature dbp-feature--dark">
+          <h3 class="dbp-feature__title">Pricing, published.</h3>
+          <div class="dbp-feature__body">Permit-ready plan sets from $4,800, priced by project. Full ADU sets typically run $9–14K — about $12 to $16 a square foot. No fine print; drawing plans is all we sell. <em>"Professional, on time and honest… 5+ projects" — from our Google reviews. Repeat work is the only advertising we've done in 15 years.</em></div>
+        </div>
+        <div class="dbp-feature dbp-feature--dark">
+          <h3 class="dbp-feature__title">Weighing more than one lot? Run them all.</h3>
+          <div class="dbp-feature__body">The Lot Check is free and doesn't mind how many addresses you try. It's a first look, not underwriting — hedged on purpose — but two minutes per address tells you which lots deserve your afternoon. For the ones that matter, call and we'll give the parcel a human read.</div>
+        </div>
+      </div>
+      <div class="lc-pro-form-wrap">
+        <h3 class="lc-pro-form-title">Tell us what you build</h3>
+        <p class="lc-pro-lede">Leave your numbers and we'll call you back to talk projects and pricing. If you run multiple projects a year, good working relationships run both directions — that's how this firm has grown since 1991.</p>
+        <form id="pro-form" class="lc-pro-form">
+          <div class="lc-labeled"><label for="pro-name">Your name</label><input id="pro-name" class="dbp-input" type="text" name="name" autocomplete="name" required /></div>
+          <div class="lc-labeled"><label for="pro-phone">Direct phone</label><input id="pro-phone" class="dbp-input" type="tel" name="phone" autocomplete="tel" required /></div>
+          <div class="lc-labeled"><label for="pro-company">Company <span class="lc-optional">(optional)</span></label><input id="pro-company" class="dbp-input" type="text" name="company" autocomplete="organization" /></div>
+          <div class="lc-labeled"><span class="lc-labeled__label" id="pro-vol-label">Projects per year</span>
+            <div class="lc-goalrow__chips" role="group" aria-labelledby="pro-vol-label">
+              <button type="button" class="lc-chipbtn lc-chipbtn--dark" aria-pressed="false" data-volume="1–2">1–2</button>
+              <button type="button" class="lc-chipbtn lc-chipbtn--dark" aria-pressed="false" data-volume="3–10">3–10</button>
+              <button type="button" class="lc-chipbtn lc-chipbtn--dark" aria-pressed="false" data-volume="10+">10+</button>
+            </div>
+          </div>
+          <button type="submit" class="dbp-btn dbp-btn--primary">Have Us Call About Your Projects</button>
+        </form>
+        <p class="lc-microcopy lc-microcopy--dark" id="pro-note" aria-live="polite">Or skip the form: call <a href="tel:+13235668096"><strong>323.566.8096</strong></a> and say you build. You'll get the same family that's answered this line since 1991.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA (DS: Section--cta) ============ -->
+  <section class="dbp-section dbp-section--cta">
+    <div class="dbp-section__inner dbp-section__inner--narrow">
+      <h2>A no today is free. A no next year is expensive.</h2>
+      <p class="dbp-section__lede">And a likely yes today comes with a next step. Free, about two minutes, no email — just your address.</p>
+      <form class="lc-form lc-form--center lotcheck-form-bottom" data-mirror="lotcheck-form">
+        <div class="lc-labeled">
+          <label for="address-input-bottom">Your property address</label>
+          <input id="address-input-bottom" class="dbp-input" type="text" name="address" autocomplete="street-address" placeholder="e.g. 4321 Tweedy Blvd, South Gate" required />
+        </div>
+        <button type="submit" class="dbp-btn dbp-btn--primary">Check My Lot — Free</button>
+      </form>
+      <p class="lc-hero-call">Rather talk it through first? <a href="tel:+13235668096"><strong>Call us: 323.566.8096</strong></a> · Hablamos Español</p>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER (DS: Footer) ============ -->
+  <footer class="dbp-footer">
+    <a href="https://diazblueprint.com" aria-label="Diaz Blueprint &amp; Drafting Services — diazblueprint.com">
+      <img class="dbp-logo dbp-logo--footer" src="/assets/dbp-logo-white.png" width="128" height="32" alt="Diaz Blueprint &amp; Drafting Services" />
+    </a>
+    <div>
+      Est. 1991 · <a href="https://diazblueprint.com">diazblueprint.com</a> ·
+      <a href="tel:+13235668096"><strong>323.566.8096</strong></a> · Serving Los Angeles &amp; Orange Counties
+    </div>
+    <p class="dbp-footer__taglines"><em>Plans that pass. People who care. · <span lang="es">Desde 1991. Para tu familia.</span></em></p>
+    <p class="dbp-footer__legal">
+      The Lot Check is an automated feasibility estimate based on public county records and California state ADU law.
+      It is not a permit, a zoning determination, or a guarantee of approval. Final requirements are set by your city
+      during plan check. Results are stated as "likely" for a reason — call us for a human review of your specific lot. 323.566.8096.
+    </p>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>
