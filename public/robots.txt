@@ -1,0 +1,13 @@
+# robots.txt — https://lotcheck.diazblueprint.com
+# Diaz Blueprint & Drafting Services — Lot Check (free ADU feasibility tool)
+
+User-agent: *
+Allow: /
+
+# API endpoints are POST-only form handlers, not pages to index.
+Disallow: /api/
+
+# Lead-magnet PDF is delivered after email capture; keep it out of the index.
+Disallow: /downloads/
+
+Sitemap: https://lotcheck.diazblueprint.com/sitemap.xml

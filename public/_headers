@@ -1,0 +1,45 @@
+# ─────────────────────────────────────────────────────────────
+# Cloudflare Pages headers — lotcheck.diazblueprint.com
+# Security headers apply to every response (/*). Long-cache rules
+# apply only to fingerprint-safe binary assets. See CACHING NOTE
+# re: CSS/JS. Verify after deploy with `curl -sI <url>`.
+#
+# The CSP ships as Report-Only so it CANNOT break the live page —
+# it only logs violations to the browser console. Load the page,
+# submit a test lead, and confirm no CSP reports before promoting
+# it: rename the header to `Content-Security-Policy` to enforce.
+# formspree.io (lead capture) and the GA + Google Fonts hosts are
+# already allow-listed below.
+# ─────────────────────────────────────────────────────────────
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: DENY
+  Permissions-Policy: geolocation=(), camera=(), microphone=(), payment=(), usb=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Content-Security-Policy-Report-Only: default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self' https://formspree.io; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com https://stats.g.doubleclick.net https://www.google.com; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://formspree.io https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://stats.g.doubleclick.net https://www.google.com; upgrade-insecure-requests
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Immutable binary assets. When one changes, rename it (or append ?v=).
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/downloads/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+
+# ── CACHING NOTE ─────────────────────────────────────────────
+# styles.css / ds.css / app.js are NOT fingerprinted and are edited
+# in place, so a 1-year immutable cache would serve STALE assets to
+# returning users after a deploy. Keep the short cache until the
+# filenames are hashed (e.g. styles.9f3a1c.css); then switch both to
+# `public, max-age=31536000, immutable`.
+# ─────────────────────────────────────────────────────────────
+/*.css
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+
+/*.js
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400

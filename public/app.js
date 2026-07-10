@@ -212,7 +212,7 @@
 
     if (data.facts && data.facts.length) {
       html +=
-        '<div class="lc-result-section"><h4>Your lot, from county records</h4><div class="lc-facts">' +
+        '<div class="lc-result-section"><h3>Your lot, from county records</h3><div class="lc-facts">' +
         data.facts.map(f =>
           '<span class="dbp-stat"><span class="dbp-stat__num">' + esc(f.num) + '</span>' +
           '<span class="dbp-stat__label">' + esc(f.label) + '</span></span>'
@@ -222,14 +222,14 @@
 
     if (data.types && data.types.length) {
       html +=
-        '<div class="lc-result-section"><h4>What likely fits</h4><div class="dbp-grid">' +
+        '<div class="lc-result-section"><h3>What likely fits</h3><div class="dbp-grid">' +
         data.types.map(typeChip).join('') +
         '</div></div>';
     }
 
     if (data.costs && data.costs.length) {
       html +=
-        '<div class="lc-result-section"><h4>Ballpark cost to build</h4><div class="dbp-grid">' +
+        '<div class="lc-result-section"><h3>Ballpark cost to build</h3><div class="dbp-grid">' +
         data.costs.map(c =>
           '<div class="dbp-chip"><span class="dbp-chip__name">' + esc(c.name) + '</span>' +
           '<span class="dbp-chip__note">' + esc(c.range) + (c.note ? ' · ' + esc(c.note) : '') + '</span></div>'
@@ -239,7 +239,7 @@
 
     if (data.notes && data.notes.length) {
       html +=
-        '<div class="lc-result-section"><h4>Worth knowing</h4><ul class="dbp-bullets">' +
+        '<div class="lc-result-section"><h3>Worth knowing</h3><ul class="dbp-bullets">' +
         data.notes.map(n => '<li>' + esc(n) + '</li>').join('') +
         '</ul></div>';
     }
@@ -250,7 +250,7 @@
     const ownerNote = OWNER_NOTES[qual.owner] || '';
 
     html +=
-      '<div class="lc-result-next"><h4>Your next step</h4>' +
+      '<div class="lc-result-next"><h3>Your next step</h3>' +
       '<p>' + esc(data.nextStep || 'Call us and we’ll walk you through it — no pressure either way.') + '</p>' +
       (goalLine ? '<p class="lc-goal-line">' + esc(goalLine) + '</p>' : '') +
       '<p class="lc-verdict-ask">' + esc(verdictAsk) + '</p>' +
@@ -491,8 +491,9 @@
     let volume = '';
     proForm.querySelectorAll('[data-volume]').forEach((btn) => {
       btn.addEventListener('click', function () {
-        proForm.querySelectorAll('[data-volume]').forEach((b) => b.classList.remove('lc-chipbtn--on'));
+        proForm.querySelectorAll('[data-volume]').forEach((b) => { b.classList.remove('lc-chipbtn--on'); b.setAttribute('aria-pressed', 'false'); });
         btn.classList.add('lc-chipbtn--on');
+        btn.setAttribute('aria-pressed', 'true');
         volume = btn.dataset.volume;
       });
     });
