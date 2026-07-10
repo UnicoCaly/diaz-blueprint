@@ -37,8 +37,8 @@ a:hover { text-decoration: underline; }
 /* ---------- Hero layout ---------- */
 .lc-hero-grid {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 44px;
+  grid-template-columns: 1fr 0.92fr;
+  gap: 40px;
   align-items: center;
 }
 /* New hero (2026-07-10): short "ADU Lot Check" H1 + one-line value tagline
@@ -47,6 +47,9 @@ a:hover { text-decoration: underline; }
    Spanish welcome. */
 .dbp-hero__sub { font-weight: 500; color: var(--dbp-dark); }
 .dbp-hero__lede { font-size: 16px; color: var(--dbp-gray-700); line-height: 1.55; margin-bottom: 10px; max-width: 52ch; }
+/* Big stacked Process-Blue title (2026-07-10): each word on its own line. */
+.dbp-hero h1.lc-h1-stack { color: var(--dbp-blue); font-size: clamp(48px, 9vw, 104px); line-height: 0.92; letter-spacing: -0.015em; margin-bottom: 20px; text-transform: uppercase; }
+.lc-h1-stack span { display: block; }
 .lc-hero-call { font-size: 14.5px; color: var(--dbp-gray-700); margin-top: 16px; }
 .lc-microcopy { font-size: 12.5px; color: var(--dbp-gray-500); margin-top: 10px; font-style: italic; }
 
@@ -56,10 +59,13 @@ a:hover { text-decoration: underline; }
 .lc-form--center { max-width: 560px; margin: 0 auto 8px; }
 
 /* Blueprint sketch (page-specific line art) */
-.lc-hero-plan svg { width: 100%; height: auto; }
+.lc-hero-plan svg { width: 100%; height: auto; filter: drop-shadow(0 14px 30px rgba(26, 26, 46, 0.15)); }
 .plan-label { font-family: var(--dbp-font-head); font-size: 10px; letter-spacing: 2px; fill: var(--dbp-gray-500); }
 .plan-label-blue { fill: var(--dbp-blue); font-weight: 700; }
 .plan-dim { font-family: var(--dbp-font-head); font-size: 9px; fill: var(--dbp-blue); }
+/* Blueprint title-block text (bottom-right of the drawing sheet) */
+.plan-tb { font-family: var(--dbp-font-head); font-size: 8px; letter-spacing: 1px; fill: var(--dbp-gray-500); }
+.plan-tb--title { fill: var(--dbp-blue); font-weight: 700; font-size: 8.5px; letter-spacing: 0.5px; }
 
 /* "Every Lot Check includes" — a warm DS card with a small title */
 .lc-includes { margin-top: 44px; }
