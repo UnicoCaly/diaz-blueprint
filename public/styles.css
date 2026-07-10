@@ -41,6 +41,12 @@ a:hover { text-decoration: underline; }
   gap: 44px;
   align-items: center;
 }
+/* New hero (2026-07-10): short "ADU Lot Check" H1 + one-line value tagline
+   (.dbp-hero__sub, given a little more presence) + a supporting lede that keeps
+   the SEO keywords, the honest "if it doesn't work we'll tell you" line, and the
+   Spanish welcome. */
+.dbp-hero__sub { font-weight: 500; color: var(--dbp-dark); }
+.dbp-hero__lede { font-size: 16px; color: var(--dbp-gray-700); line-height: 1.55; margin-bottom: 10px; max-width: 52ch; }
 .lc-hero-call { font-size: 14.5px; color: var(--dbp-gray-700); margin-top: 16px; }
 .lc-microcopy { font-size: 12.5px; color: var(--dbp-gray-500); margin-top: 10px; font-style: italic; }
 
@@ -229,17 +235,17 @@ a:hover { text-decoration: underline; }
 /* Header polish (2026-07-09): larger logo, more breathing room, and the header
    content aligned to the same 1040px container as the hero (logo lines up with
    the H1, the contact block lines up with the hero's right edge). */
-.dbp-header { display: block; padding: 16px 20px; }
+.dbp-header { display: block; padding: 24px 20px; }
 .dbp-header__inner {
   max-width: 1040px; width: 100%; margin: 0 auto;
   display: flex; align-items: center; justify-content: space-between;
   gap: 12px; flex-wrap: wrap;
 }
-.dbp-logo--header { height: 48px; }
+.dbp-logo--header { height: 56px; }
 .dbp-logo-link { display: inline-flex; align-items: center; line-height: 0; }
 
 /* Sticky header must not cover scrolled-to targets (header is taller now) */
-#results, #pro-lane { scroll-margin-top: 96px; }
+#results, #pro-lane { scroll-margin-top: 116px; }
 
 /* Verdict banner contrast (page-layer override of DS tones for small text) */
 .dbp-verdict--yes { background: #0E7A37; }
@@ -299,8 +305,8 @@ a:hover { text-decoration: underline; }
   .dbp-header__espanol { display: none; }
   .lc-pro-link { display: none; }
   .dbp-header__est { display: none; }
-  .dbp-logo--header { height: 36px; }
-  #results, #pro-lane { scroll-margin-top: 76px; }
+  .dbp-logo--header { height: 40px; }
+  #results, #pro-lane { scroll-margin-top: 80px; }
 
   /* Kill the 6px horizontal overflow: grid items default to min-width:auto, so the
      "Garage conversion" ADU card's min-content pushed both 1fr tracks past the
