@@ -78,6 +78,11 @@
       .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
   }
 
+  // Analytics — GA4 events. Guarded so a missing/blocked gtag never throws.
+  function track(name, params) {
+    try { if (typeof window.gtag === 'function') window.gtag('event', name, params || {}); } catch (e) {}
+  }
+
   /* ---------- Lead capture via Formspree ----------
      Create a form at formspree.io and paste its endpoint below — it looks like
      https://formspree.io/f/abcdwxyz . One form handles all three lead kinds; the
@@ -99,7 +104,10 @@
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
       body: JSON.stringify(body),
     })
-      .then((r) => ({ ok: r.ok }))
+      .then((r) => {
+        if (r.ok) track('generate_lead', { lead_type: payload.kind });
+        return { ok: r.ok };
+      })
       .catch(() => ({ ok: false }));
   }
 
@@ -397,6 +405,7 @@
     if (checking) return;
     checking = true;
     startLoading();
+    track('lot_check_run');
 
     fetch('/api/check', {
       method: 'POST',
@@ -414,6 +423,7 @@
         stopLoading();
         data.inputAddress = address;
         render(data);
+        track('lot_check_result', { verdict: data.verdict || 'look' });
       })
       .catch((err) => {
         stopLoading();
@@ -436,6 +446,12 @@
 
   wireForm(document.getElementById('lotcheck-form'));
   document.querySelectorAll('.lotcheck-form-bottom').forEach(wireForm);
+
+  /* ---------- Analytics: click-to-call on any tel: link (incl. the result card) ---------- */
+  document.addEventListener('click', function (e) {
+    const tel = e.target.closest && e.target.closest('a[href^="tel:"]');
+    if (tel) track('click_to_call', { number: (tel.getAttribute('href') || '').replace('tel:', '') });
+  });
 
   /* ---------- Handbook: email in, download link out. The whole transaction. ---------- */
   const handbookForm = document.getElementById('handbook-form');

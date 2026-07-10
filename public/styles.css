@@ -226,13 +226,20 @@ a:hover { text-decoration: underline; }
 .lc-grid-4 { grid-template-columns: repeat(4, 1fr); }
 
 /* ---------- QA fixes: occlusion, contrast, motion, labeled hero form ---------- */
-/* Header polish (2026-07-02): larger logo, more breathing room from the page edge */
-.dbp-header { padding: 12px clamp(20px, 4vw, 44px); }
-.dbp-logo--header { height: 40px; }
+/* Header polish (2026-07-09): larger logo, more breathing room, and the header
+   content aligned to the same 1040px container as the hero (logo lines up with
+   the H1, the contact block lines up with the hero's right edge). */
+.dbp-header { display: block; padding: 16px 20px; }
+.dbp-header__inner {
+  max-width: 1040px; width: 100%; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px; flex-wrap: wrap;
+}
+.dbp-logo--header { height: 48px; }
 .dbp-logo-link { display: inline-flex; align-items: center; line-height: 0; }
 
 /* Sticky header must not cover scrolled-to targets (header is taller now) */
-#results, #pro-lane { scroll-margin-top: 76px; }
+#results, #pro-lane { scroll-margin-top: 96px; }
 
 /* Verdict banner contrast (page-layer override of DS tones for small text) */
 .dbp-verdict--yes { background: #0E7A37; }
@@ -248,10 +255,21 @@ a:hover { text-decoration: underline; }
 .dbp-footer__legal { color: rgba(255, 255, 255, 0.62); font-size: 12.5px; }
 .dbp-footer__taglines { color: rgba(255, 255, 255, 0.68); }
 
+/* Footer — "Built and powered by" Proágo lockup (the brand credit) */
+.lc-proago { margin-top: 26px; display: flex; flex-direction: column; align-items: center; gap: 9px; }
+.lc-proago__label { font-size: 11px; letter-spacing: 1.8px; text-transform: uppercase; color: rgba(255, 255, 255, 0.6); }
+.lc-proago__logo { height: 38px; width: auto; opacity: 0.92; }
+
 /* Labeled inputs inside the flex address forms */
 .lc-form .lc-labeled { flex: 1 1 280px; }
 .lc-form .lc-labeled .dbp-input { width: 100%; }
 .lc-form { align-items: flex-end; }
+
+/* Fix (2026-07-09): a .dbp-input inside a column-flex .lc-labeled was inheriting
+   the row flex-basis (280px / 170px) as its HEIGHT, making address/lead fields
+   absurdly tall. Pin inputs in a labeled wrapper to their natural padding height
+   (the height the pro-lane fields already have). */
+.lc-labeled .dbp-input { flex: 0 0 auto; }
 
 /* Failure notes promoted to alert styling get the amber treatment */
 #handbook-note.lc-lead-fail, #pro-note.lc-lead-fail { font-style: normal; font-size: 14px; }
@@ -270,6 +288,11 @@ a:hover { text-decoration: underline; }
   .lc-hero-plan { max-width: 420px; margin: 0 auto; }
   .dbp-header__espanol { display: none; }
   .lc-pro-link { display: none; }
+  /* The big desktop logo is too wide for a phone next to the phone button — keep
+     it at the original compact size on mobile so the header stays one clean row. */
+  .dbp-logo--header { height: 40px; }
+  /* Header wraps to two rows on phones (~127px) — clear it when scrolling to a section. */
+  #results, #pro-lane { scroll-margin-top: 136px; }
   .dbp-section { padding: 44px 20px; }
   .lc-form .dbp-btn { flex: 1 1 100%; }
   .lc-deal { grid-template-columns: 1fr; }
