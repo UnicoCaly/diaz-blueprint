@@ -19,7 +19,11 @@
   Permissions-Policy: geolocation=(), camera=(), microphone=(), payment=(), usb=()
   Strict-Transport-Security: max-age=31536000; includeSubDomains
   Content-Security-Policy-Report-Only: default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self' https://formspree.io; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com https://stats.g.doubleclick.net https://www.google.com; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://formspree.io https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://stats.g.doubleclick.net https://www.google.com; upgrade-insecure-requests
-  Cache-Control: public, max-age=0, must-revalidate
+
+# NOTE: no Cache-Control under /* on purpose — Cloudflare Pages MERGES a /* header
+# with the per-path one (producing "max-age=0, ..., max-age=31536000"), which
+# defeats the immutable cache. HTML already defaults to max-age=0/must-revalidate
+# on Pages, so we set Cache-Control ONLY in the specific path rules below.
 
 # Immutable binary assets. When one changes, rename it (or append ?v=).
 /assets/*
