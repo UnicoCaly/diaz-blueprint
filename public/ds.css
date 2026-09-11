@@ -114,7 +114,7 @@
   padding: 32px 20px 40px;
   font-size: 13.5px;
 }
-.dbp-footer a { color: rgba(255, 255, 255, 0.85); text-decoration: none; }
+.dbp-footer a { color: rgba(255, 255, 255, 0.85); text-decoration: underline; text-underline-offset: 2px; }
 .dbp-footer__taglines { margin-top: 8px; color: rgba(255, 255, 255, 0.45); font-style: italic; }
 .dbp-footer__legal { margin: 18px auto 0; max-width: 680px; font-size: 11.5px; line-height: 1.6; color: rgba(255, 255, 255, 0.38); }
 

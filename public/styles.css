@@ -166,6 +166,8 @@ a:hover { text-decoration: underline; }
 .lc-labeled { display: flex; flex-direction: column; gap: 4px; flex: 1 1 170px; }
 .lc-labeled label, .lc-labeled__label { font-size: 13px; font-weight: 600; color: var(--dbp-gray-700); }
 .lc-optional { font-weight: 400; color: var(--dbp-gray-500); }
+/* the (optional) label on the dark pro-lane background needs its own contrast */
+.dbp-section--dark .lc-optional { color: rgba(255, 255, 255, 0.72); }
 .lc-lead-form .lc-labeled .dbp-input { width: 100%; }
 .lc-lead-form { align-items: flex-end; }
 
@@ -266,6 +268,9 @@ a:hover { text-decoration: underline; }
 /* Footer legibility (legal text is the least readable line for seniors) */
 .dbp-footer__legal { color: rgba(255, 255, 255, 0.62); font-size: 12.5px; }
 .dbp-footer__taglines { color: rgba(255, 255, 255, 0.68); }
+/* footer NAP line, links into the main site, and the service-area line */
+.dbp-footer__nap, .lc-footer-links { margin-top: 8px; color: rgba(255, 255, 255, 0.68); }
+.dbp-footer__area { margin: 8px auto 0; max-width: 680px; color: rgba(255, 255, 255, 0.62); font-size: 12.5px; line-height: 1.6; }
 
 /* Footer — "Built and powered by" Proágo lockup (the brand credit) */
 .lc-proago { margin-top: 26px; display: flex; flex-direction: column; align-items: center; gap: 9px; }

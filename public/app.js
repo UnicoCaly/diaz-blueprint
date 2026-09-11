@@ -375,7 +375,7 @@
               leadForm.outerHTML =
                 '<p class="lc-lead-thanks">Got it. A real person will call you back — English or Spanish. ' +
                 'If the honest answer is no, that’s the answer you’ll get. ' +
-                'If it’s easier, call us anytime: 323.566.8096.</p>';
+                'If it’s easier, call us anytime: <a href="tel:+13235668096">323.566.8096</a>.</p>';
               if (leadFail) leadFail.hidden = true;
             } else {
               // Never pretend it was saved — keep the form, show the phone path.
@@ -515,7 +515,7 @@
             if (note) note.hidden = true;
             proForm.outerHTML =
               '<p class="lc-lead-thanks">Got it — we’ll call you back to talk projects and pricing. ' +
-              'If it’s faster, the line is 323.566.8096.</p>';
+              'If it’s faster, the line is <a href="tel:+13235668096">323.566.8096</a>.</p>';
           } else {
             if (note) {
               note.innerHTML = 'We couldn’t save that just now, and we won’t pretend we did. Call <a href="tel:+13235668096"><strong>323.566.8096</strong></a> and say you build — a real person answers.';
