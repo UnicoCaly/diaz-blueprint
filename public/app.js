@@ -375,7 +375,7 @@
               leadForm.outerHTML =
                 '<p class="lc-lead-thanks">Got it. A real person will call you back — English or Spanish. ' +
                 'If the honest answer is no, that’s the answer you’ll get. ' +
-                'If it’s easier, call us anytime: <a href="tel:+13235668096">323.566.8096</a>.</p>';
+                'If it’s easier, call us Mon–Fri, 9–5: <a href="tel:+13235668096">323.566.8096</a>.</p>';
               if (leadFail) leadFail.hidden = true;
             } else {
               // Never pretend it was saved — keep the form, show the phone path.
