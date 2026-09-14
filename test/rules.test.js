@@ -7,7 +7,7 @@
  */
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { evaluate } from '../shared/rules.js';
+import { evaluate, ADU_RULES } from '../shared/rules.js';
 
 const VALID_VERDICTS = new Set(['yes', 'conditions', 'look']);
 
@@ -120,4 +120,15 @@ test('empty / garbage input degrades safely to a closer look', () => {
     assert.equal(r.verdict, 'look', 'unrecognized input must fall through to look');
     assertGuardrails(r, `garbage(${JSON.stringify(bad)})`);
   }
+});
+
+test('attached-ADU note matches Gov. Code §66314(d)(4) + §66321(b)(3)', () => {
+  const r = evaluate({ county: 'LA', classification: 'single_family', lotSqft: 5200, hasDwelling: true, dataConfidence: 'high' });
+  const a = r.types.find((t) => t.name === 'Attached ADU');
+  assert.ok(a, 'single-family result lists an attached ADU');
+  assert.match(a.note, /half your home/i, 'states the 50%-of-home cap');
+  assert.match(a.note, /800 sq ft/, 'states the 800 sq ft floor');
+  assert.doesNotMatch(a.note, /850|1,000/, '850/1,000 is the flat-cap floor, not the attached floor');
+  assert.equal(ADU_RULES.attached.guaranteedMinSqft, 800);
+  assert.equal(ADU_RULES.attached.cityCapPctOfPrimary, 50);
 });

@@ -21,15 +21,15 @@
 export const ADU_RULES = {
   detached: {
     guaranteedMinSqft: 800, // §66321(b)(3) — city standards can't preclude this
-    maxHeightFt: 16, // §66321(b)(4)(A)
+    maxHeightFt: 16, // §66321(b)(4)(A) — a floor on city height limits, not a ceiling (18 ft near major transit, +2 ft roof pitch)
     sideRearSetbackFt: 4, // §66321(b)(3)
-    sizeFloorStudioOr1BR: 850, // §66321(b)(2)(A) — city cap can't go below
+    sizeFloorStudioOr1BR: 850, // §66321(b)(2)(A) — a flat max-sqft cap can't go below
     sizeFloor2PlusBR: 1000, // §66321(b)(2)(B)
     commonLocalMaxSqft: 1200, // LOCAL-VARIABLE — common cap, not a state mandate
   },
   attached: {
-    guaranteedMinSqft: 800, // §66321(b)(3)
-    cityCapPctOfPrimary: 50, // LOCAL-VARIABLE cap, but never below 800 sqft
+    guaranteedMinSqft: 800, // §66321(b)(3) — a %-of-home, FAR or coverage cap can't block 800 sqft w/ 4-ft side/rear setbacks
+    cityCapPctOfPrimary: 50, // §66314(d)(4) — state max (§66315) and no-ordinance default; floor under it is 800, not 850/1,000 (HCD Brentwood letter 2025-10-15)
   },
   jadu: {
     maxSqft: 500, // §66333
@@ -59,7 +59,7 @@ const ADU_TYPES = {
   attached: {
     name: 'Attached ADU',
     status: 'eligible',
-    note: 'Built onto your house. State law guarantees a real unit — a city’s size cap can’t force you below about 850 sq ft (1,000+ for two or more bedrooms), even on a smaller home.',
+    note: 'Built onto your house. A city can cap it at half your home’s size. But state law won’t let that cap go below 800 sq ft.',
   },
   conversion: {
     name: 'Garage or space conversion',
@@ -171,7 +171,7 @@ export function evaluate(facts) {
 
   if (lotSqft != null && lotSqft < 2500) {
     notes.push(
-      'Your lot is on the smaller side, so a garage conversion or a junior ADU is often the most realistic path — though the state’s guaranteed 800 sq ft detached unit is still protected.'
+      'Your lot is on the smaller side, so a garage conversion or a junior ADU is often the most realistic path — though state law still protects an 800 sq ft detached unit, if it fits with 4-foot side and rear setbacks.'
     );
   }
   notes.push(

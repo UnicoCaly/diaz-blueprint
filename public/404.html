@@ -7,6 +7,15 @@
   <!-- With this file present, Cloudflare Pages returns a real 404 for unknown paths
        instead of serving index.html with a 200 (the old soft-404 behavior). -->
   <meta name="robots" content="noindex" />
+  <script>
+    // Old bio links put the UTM tags after an encoded '#' (/%23utm_source=...). Send them to the tool with a real query string.
+    (function () {
+      try {
+        var p = decodeURIComponent(location.pathname);
+        if (p.indexOf('/#') === 0) location.replace('/?' + p.slice(2) + location.search.replace(/^\?/, '&'));
+      } catch (e) {}
+    })();
+  </script>
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
